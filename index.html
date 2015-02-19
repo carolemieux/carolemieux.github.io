@@ -1,28 +1,160 @@
 <!DOCTYPE html>
 <html>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <head>
 <style>
 body {
     background-color:#f5f5f5;
 }
+td {
+    padding:15px;
+}
 .main {
+    font-family: 'Open Sans', sans-serif;
     background-color:white;
     color:black;
     margin-left:auto;
     margin-right:auto;
-	width:70%;
+	width:800px;
 } 
+.hbar {
+    clear: both;
+	margin-left:auto;
+    margin-right:auto;
+	margin-top: -10px;
+	border-top: solid;
+	border-top-width:2px;
+	padding-top: 0em;
+	color:#e5e5e5;
+	width:90%;
+}
+h2 {
+margin-left:40px;
+}
+
+.inner {
+    clear: both;
+	margin-left:auto;
+    margin-right:auto;
+	padding-top: 0em;
+	width:90%;
+}
+
+
+
 </style>
 </head>
 
 <body>
 
 <div class="main">
-<h2>Caro Lemieux</h2>
-<p>
-Allo!
-</p>
+<table width="100%">
+<tr><td align="center">
+<img src="caro-pic.png" alt="Caroline Lemieux" width="200">
+</td>
+<td align="left">
+<h1>Caroline Lemieux</h1>
+Undergraduate
+<br />
+<a href="http://www.ubc.ca"> University of British Columbia</a><br />
+Departments of <a href="http://www.cs.ubc.ca">Computer Science</a>, <a href="http://www.math.ubc.ca">Mathematics</a>
+</td>
+</tr>
+</table>
+<br />
+<h2>About</h2>
+<div class="hbar">
 </div> 
+<table class="inner">
+<tr>
+<td align="justify">
+<p>I am a 3rd year undergraduate student pursuing a BSc in Combined Honours Computer Science
+and Mathematics at the University of British Columbia.
+</p>
+<p>My current research focuses on formal methods and analysis of program behaviour. I have
+done most of my research with <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Bestchastnikh</a>.
+My research interests remain broadly in the formal intersection of Computer Science and Mathematics.
+Additionally, I have always been passionate about helping my fellow students learn, and
+have been an undergraduate teaching assistant at UBC. 
+</p>
+<td>
+</tr>
+</table>
+
+<h2>Projects</h2>
+<div class="hbar">
+</div> 
+<table class="inner">
+<tr>
+<td align="justify">
+<ul>
+<li>
+I am a main developer of the <a href= "https://bitbucket.org/bestchai/texada">Texada</a> tool,
+which mines linear temporal logic (LTL) relationships of arbitrary length and complexity.
+Texada takes as input a log of traces and a property type expressed in LTL and outputs
+instantiations of this property types with log events which hold on the entire log. Texada
+also supports confidence and support thresholds to allow for mining on imperfect or
+incomplete logs. You can now try <a href= "https://bestchai.bitbucket.org/texada">Texada</a>!
+</li>
+<li> I am now building the Quarry tool. Quarry interfaces data invariants with temporal
+invariants in order to extract data-temporal invariants of 
+arbitrary length and complexity. Quarry 
+mines relationships between Daikon-style data invariants specified
+in linear temporal logic (LTL). Quarry uses Daikon for data invariant
+inference and Texada for inference of temporal invariants. </li>
+<li>I have done some enhancement work on <a href="https://code.google.com/p/synoptic/">Invarimint</a>, 
+enhancing the tool to allow users to specify individual property types to be mined instead of only
+having the Synoptic and kTails algorithms to choose from.</li>
+<li>I have worked on one of UBC's first computer science MOOCs, Introduction to Systematic Program
+Design, while the course was still <a href= "https://www.coursera.org/course/programdesign">hosted on Coursera</a>.
+I worked on both MOOC offerings, focusing mostly on video lecture development, but also participating in TA
+tasks like replying to students on forums and composing peer-graded projects. The video lectures from
+the Coursera offering were used in CPSC 110, UBC's introductory computer science course, and are available
+for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">here</a>. </li>
+</ul>
+<td>
+</tr>
+</table>
+
+
+<h2>Papers and Publications</h2>
+<div class="hbar">
+</div> 
+<table class="inner">
+<tr>
+<td align="justify">
+<ul>
+<li>ACM SRC sub </li>
+<li>ISSTA paper under submission </li>
+</ul>
+<td>
+</tr>
+</table>
+
+<h2>CV</h2>
+<div class="hbar">
+</div> 
+<table class="inner">
+<tr>
+<td align="justify">
+CV goes here.
+<td>
+</tr>
+</table>
+
+<h2>Funding</h2>
+<div class="hbar">
+</div> 
+<table class="inner">
+<tr>
+<td align="justify">
+I am thankful to have received funding from 
+<a href="http://www.nserc-crsng.gc.ca/">NSERC</a> and <a href="http://www.ubc.ca">UBC</a>
+to support my research.
+<td>
+</tr>
+</table>
+
 
 </body>
 </html>
