@@ -24,17 +24,21 @@ Department of <a href="http://www.eecs.berkeley.edu/">Computer Science</a>
 <div class="hbar">
 </div> 
 <section class="inner">
-<p>I am a first year Ph.D. student at the University of California Berkeley, in <a href="http://people.eecs.berkeley.edu/~ksen">Koushik Sen</a>'s group. In May 2016 I received my B.Sc. at the University of British Columbia, majoring in 
-Combined Honours Computer Science and Mathematics, and was awarded the Governor General's Silver Medal (highest standing in the graduating class of the Faculty of Science).
+<p>I am a second year Ph.D. student at the University of California, Berkeley, advised by <a href="http://people.eecs.berkeley.edu/~ksen">Koushik Sen</a>. 
+<p>In May 2016 I received my B.Sc. (in 
+Combined Honours Computer Science and Mathematics) at the University of British Columbia, and was awarded the Governor General's Silver Medal for highest standing in the graduating class of the Faculty of Science.
 </p>
 <p>
 My research interests centre around improving, or helping developers to improve, 
 the correctness, reliability, and understanding of software systems. I am particularly
 interested in developing automated methods for engineering tasks such as testing, debugging, and
 comprehension, 
-and lean towards work with empirical aspects. 
+and lean towards work with strong empirical aspects (i.e. requiring large-scale data analysis). 
+</p>
+<p>
+This interest is a defining thread through my current and past research projects. My current research into automated testing, particularly fuzz testing, aims to produce tools which test programs as effectively as possible with as little user input as possible. In the summer of 2017 I was a research intern in the <a href="https://www.microsoft.com/en-us/research/project/tools-for-software-engineers/">Tools for Software Engineers</a> group at Microsoft, working on automating detection of anomolous errors in the distributed build system CloudBuild.
 At UBC, I worked
-with <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a> on specification mining 
+with <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a> on automated specification mining 
 tools. 
 </p>
 <p>
@@ -46,18 +50,37 @@ was an undergraduate teaching assistant at UBC.
 <h2>Projects</h2>
 <div class="hbar">
 </div> 
+<br>
+<section class="inner">
+    <h3> Current </h3>
+</section>
+<table class="inner">
+<tr>
+<td style = "width:25%">
+<img src="fairfuzz-pic.png" alt="FairFuzz" width="250">
+</td>
+<td align="justify">
+I developed an extension to <a href=http://lcamtuf.coredump.cx/afl/>AFL</a>, named <a href= "https://github.com/carolemieux/afl-rb">FairFuzz</a>, which targets rare branches to achieve faster program coverage. FairFuzz changes (1) the way in which AFL selects input for mutation and (2) the way in which AFL mutates inputs to target rare branches in the program under test. View technical details <a href= "https://arxiv.org/abs/1709.07101">here</a>.
+</td></tr>
+</table>
+
+<br>
+<section class="inner">
+    <h3> Past </h3>
+</section>
+
 <table class="inner">
 <tr>
 <td style = "width:25%">
 <img src="texada-pic.jpg" alt="Texada" width="250">
 </td>
 <td align="justify">
-I am a main developer of the <a href= "https://bitbucket.org/bestchai/texada">Texada</a> tool,
+I am the main developer of the <a href= "https://bitbucket.org/bestchai/texada">Texada</a> tool,
 which mines linear temporal logic (LTL) relationships of arbitrary length and complexity from textual logs.
 Texada takes as input a log of traces and a property type expressed in LTL and outputs
 instantiations of this property types with log events which hold on the entire log. Texada
 also supports confidence and support thresholds to allow for mining on imperfect or
-incomplete logs. You can now try <a href= "https://bestchai.bitbucket.org/texada">Texada</a>.
+incomplete logs. 
 </td>
 </tr>
 <tr> 
@@ -91,12 +114,12 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 </div> 
 <div class="inner">
 <ul>
-<li>Caroline Lemieux, Dennis Park and Ivan Beschastnikh. General LTL Specification Mining. In <i>Proceedings of the 30th International Conference on Automated Software Engineering, ASE 2015</i>, Lincoln, USA. 
+<li><b>Caroline Lemieux</b>, Dennis Park and Ivan Beschastnikh. General LTL Specification Mining. In <i>Proceedings of the 30th International Conference on Automated Software Engineering, ASE 2015</i>, Lincoln, USA. 
     <a href="texada-ase15_final.pdf">pdf</a>,
     <a href="ASE15-texada-slides.pdf">slides pdf</a>  <a href="ASE15-texada-slides.pptx">slides pptx</a></li>
-<li>Caroline Lemieux and Ivan Beschastnikh. Investigating Program Behavior Using the Texada LTL Specifications Miner. In <i>Proceedings of the 30th International Conference on Automated Software Engineering, ASE 2015</i>, Lincoln, USA. (Tool Demonstration Track).
+<li><b>Caroline Lemieux</b> and Ivan Beschastnikh. Investigating Program Behavior Using the Texada LTL Specifications Miner. In <i>Proceedings of the 30th International Conference on Automated Software Engineering, ASE 2015</i>, Lincoln, USA. (Tool Demonstration Track).
     <a href="texada_ase15_demos_final.pdf">pdf</a></li> 
-<li>Caroline Lemieux. Mining Temporal Properties of Data Invariants. In <i>Proceedings of the 37th International Conference on Software Engineering, ICSE 2015</i>, Florence, Italy. (ACM SRC Research Abstract). 
+<li><b>Caroline Lemieux</b>. Mining Temporal Properties of Data Invariants. In <i>Proceedings of the 37th International Conference on Software Engineering, ICSE 2015</i>, Florence, Italy. (ACM SRC Research Abstract). 
     <a href="icse15-quarry-src-abstract.pdf">pdf</a></li>
 </ul>
 </div>
@@ -114,106 +137,13 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 </div>
 
 
-<h2>CV</h2>
+<h2>Resume</h2>
 <div class="hbar">
 </div> 
 <div class="inner">
 <br>
-Full CV <a href="caroline-lemieux-cv.pdf">here</a>.
-<br>
-<br>
-    <strong>Education</strong>
+Full resume <a href="caroline-lemieux-resume.pdf">here</a>.
 
-<ul>
-    <li>
-        Ph.D., University of California Berkeley, (2016-present)
-    </li>
-    <li>
-        B.Sc., University of British Columbia, (2012-2016)
-    </li>
-
-</ul>
-    <strong>Awards and Scholarships</strong>
-<br>
-<i>International</i>
-<ul>
-<li>Finalist, CRA Outstanding Undergraduate Female Researcher Award for PhD-granting institutions (2016)</li>
-	<li>1st Place, Undergraduate Category of ACM SRC at ICSE 2015</li>
-    <li>Honourable Mention, CRA Outstanding Undergraduate Female Researcher Award for PhD-granting institutions (2015)</li>
-</ul> 
-<i>National</i>
-<ul>
-    <li>
-        NSERC CGS D -- declined (2016)
-    </li>
-    <li>
-        NSERC Undergraduate Student Research Award (2014, 2015)
-    </li>
-    
-</ul>
-<i>Institutional - UCB</i>
-<ul>
-
-   <li>Berkeley Fellowship for Graduate Study (2016)</li>
-   <li>EECS Excellence Award (2016)</li>
-
-</ul>
-
-<i>Institutional - UBC</i>
-<ul>
-<li>Governor General's Silver Medal in Science (best in the graduating class for the B.Sc. degree) (2016)</li>
-   <li>Markus Meister Memorial Prize in Computer Science (2016)</li>
-   <li>G C Webber Memorial Prize (2016)</li>
-   <li>Computer Science Scholarship (2015)</li>
-   <li>Shirley Snelgrove and John Yule Scholarship (2015)</li>
-       <li>Trek Excellence Scholarship for Continuing Studies (2013, 2014, 2015)
-</li>
-    <li>
-        Reginald Palliser-Wilson Scholarship (2014, 2015)
-    </li>
-    <li>Daniel Buchanan Scholarship in Mathematics (2015)</li>
-    <li>
-        Maureta Evelyn McDonald Memorial Scholarship (2014)
-    </li>
-
-    <li>
-        Charles and Jane Banks Scholarship (2013)
-    </li>
-
-    <li> Janusz J Klawe Memorial Science One Scholarship (2012) </li>
-
-    <li>
-        Chancellor's Scholar Award (2012)
-    </li>
-
-</ul>
-
-    <strong>Experience</strong>
-<br>
-<ul>
-    <li>
-        Research Assistant (USRA) (2014, 2015)
-    </li>
-<li> Research Assistant (Volunteer) (2014)</li>
-    <li>
-        UBC Undergraduate Academic Assistant (2013-2014)
-
-    <li>
-        UBC Undergraduate Teaching Assistant, CPSC 110 (2013)
-    </li>
-</ul>
-    <strong>Computer Skills</strong>
-<br>
-<ul>
-   <li> Java, C++, C, Python, Racket, HtDP teaching languages, JavaScript, LaTeX </li>
-</ul>
-    <strong>Languages</strong>
-<br>
-<ul>
-    <li>
-        French (Fluent), English (Fluent), Spanish (Basic)
-    </li>
-</ul>
 </div>
 
 
@@ -223,7 +153,7 @@ Full CV <a href="caroline-lemieux-cv.pdf">here</a>.
 <div class="inner">
 <p>
 I am thankful to have received funding from 
-<a href="http://www.nserc-crsng.gc.ca/">NSERC</a>,<a href="http://www.ubc.ca">UBC</a>, and <a href="http://www.berkeley.edu/">UCB</a>
+<a href="http://www.nserc-crsng.gc.ca/">NSERC</a>, <a href="http://www.ubc.ca">UBC</a>, and <a href="http://www.berkeley.edu/">UCB</a>
 to support my research.
 </p>
 </div>
