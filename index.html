@@ -59,10 +59,11 @@ Performance problems in software can arise unexpectedly when programs are provid
 </td></tr>
 <tr>
 <td style = "width:25%">
-<img src="fairfuzz-pic.png" alt="FairFuzz" width="250">
+<img src="FairFuzz-logo.png" alt="FairFuzz" width="250">
 </td>
 <td align="justify">
-I developed an extension to <a href=http://lcamtuf.coredump.cx/afl/>AFL</a>, named <a href= "https://github.com/carolemieux/afl-rb">FairFuzz</a>, which targets rare branches to achieve faster program coverage. FairFuzz changes (1) the way in which AFL selects input for mutation and (2) the way in which AFL mutates inputs to target rare branches in the program under test. View technical details <a href= "https://arxiv.org/abs/1709.07101">here</a>.
+ <a href= "https://github.com/carolemieux/afl-rb">FairFuzz</a> is a fuzzer built on top of 
+ <a href=http://lcamtuf.coredump.cx/afl/>AFL</a> which targets rare branches to achieve faster program coverage. FairFuzz achieves this by (1) selectively mutating inputs which exercise branches hit by few fuzz-tester generated inputs and (2) using a <i>mutation mask</i> to restrict mutations of these inputs to the parts which can be mutated while still hitting the branch of interest. On our benchmarks, FairFuzz achieves program coverage than AFL or AFLFast, and has a particular advantage on programs with <i>highly nested structure</i>.
 </td></tr>
 </table>
 
@@ -116,7 +117,8 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 </div> 
 <div class="inner">
 <ul>
-<li><b>Caroline Lemieux</b>, Rohan Padhye, Koushik Sen, and Dawn Song. PerfFuzz: Automatically Generating Pathological Inputs. To appear in <a href='https://conf.researchr.org/track/issta-2018/issta-2018-Technical-Papers#About'><i>ISSTA 2018</i></a>. <b>Distinguished Paper Award</b>. <a href="perffuzz-issta2018.pdf">pdf</a>, <a href="perffuzz_issta18_final_slides.pdf">slides pdf</a></li>
+<li><b>Caroline Lemieux</b> and Koushik Sen. FarFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage. To appear in <a href="http://www.ase2018.com/?p=program">ASE 2018</a>.  <a href="fairfuzz-ase18.pdf">pdf</a>.</li>
+<li><b>Caroline Lemieux</b>, Rohan Padhye, Koushik Sen, and Dawn Song. PerfFuzz: Automatically Generating Pathological Inputs. In <i>Proceedings of the 27th ACM SIGSOFT International Symposium on Software Testing and Analysis</i>. <b>Distinguished Paper Award</b>. <a href="fairfuzz-issta2018.pdf">pdf</a>, <a href="perffuzz_issta18_final_slides.pdf">slides pdf</a></li>
 <li><b>Caroline Lemieux</b>, Dennis Park and Ivan Beschastnikh. General LTL Specification Mining. In <i>Proceedings of the 30th International Conference on Automated Software Engineering, ASE 2015</i>, Lincoln, USA. 
     <a href="texada-ase15_final.pdf">pdf</a>,
     <a href="ASE15-texada-slides.pdf">slides pdf</a>  <a href="ASE15-texada-slides.pptx">slides pptx</a></li>
@@ -134,6 +136,8 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 </div> 
 <div class="inner">
 <ul>
+<li>PerfFuzz: Automatically Generating Pathological Inputs. Poster at ISSTA 2018, Amsterdam, Netherlands.  
+    <a href="perffuzz_poster_issta18.pdf">pdf</a></li>
 <li>Mining Temporal Relationships Between Data Invariants. Poster in SRC at ICSE 2015, Florence, Italy.  
     <a href="quarrypostertemp_v4.pdf">pdf</a></li>
 </ul>
@@ -145,8 +149,7 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 </div> 
 <div class="inner">
 <br>
-Full resume <a href="caroline-lemieux-resume.pdf">here</a>.
-
+Full resume <a href="caroline-lemieux-resume.pdf">here</a>. (last updated Sept 2017)
 </div>
 
 
@@ -156,7 +159,7 @@ Full resume <a href="caroline-lemieux-resume.pdf">here</a>.
 <div class="inner">
 <p>
 I am thankful to have received funding from 
-<a href="http://www.nserc-crsng.gc.ca/">NSERC</a>, <a href="http://www.ubc.ca">UBC</a>, and <a href="http://www.berkeley.edu/">UCB</a>
+<a href="http://www.nserc-crsng.gc.ca/">NSERC</a>, <a href="https://nsf.gov/">NSF</a>, <a href="http://www.ubc.ca">UBC</a>, and <a href="http://www.berkeley.edu/">UCB</a>
 to support my research.
 </p>
 </div>
