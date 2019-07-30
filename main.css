@@ -1,5 +1,5 @@
 body {
-    background-color:#eeeeee;
+    background-color:#f8f8f8;
 }
 td {
     padding:15px;
@@ -21,7 +21,7 @@ td {
 	border-top: solid;
 	border-top-width:2px;
 	padding-top: 0em;
-	color:#e5e5e5;
+	color:#f0f0f0;
 	width:90%;
 }
 h2 {
@@ -45,15 +45,15 @@ clear: left;
 
 header {
 	margin-left:auto;
-    margin-right:auto;
+  margin-right:auto;
 	padding-top: 20px;
-  padding-bottom: 150px;
+  padding-bottom: 120px;
 	width:90%; 
 }
 
 header img {
  float: left;
- padding-right: 80px
+ padding-right: 50px
 }
 
 header h1, p {
