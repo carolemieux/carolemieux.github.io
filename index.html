@@ -18,17 +18,21 @@ PhD Candidate
 <a href="http://www.berkeley.edu/"> University of California Berkeley</a><br />
 Department of <a href="http://www.eecs.berkeley.edu/">Computer Science</a>
 <br />
+Email: clemieux<span style="display:none">bots-gotta-get-smarter-than-this</span><span>@</span><span style="display:none">its-really-not-that-hard</span><span>cs.berkeley.edu</span>
+<br />
 Twitter: <a href="https://twitter.com/cestlemieux">@cestlemieux</a>
 <br />
-Teaching: <a href="61a.html">Spring 2019 CS 61A</a>
+Github: <a href="https://github.com/carolemieux">carolemieux</a>
 <br />
+<!-- Teaching: <a href="61a.html">Spring 2019 CS 61A</a>
+<br /> -->
 </header>
 
 <h2>About</h2>
 <div class="hbar">
 </div> 
 <section class="inner">
-<p>I am a third year Ph.D. student at the University of California, Berkeley, advised by <a href="http://people.eecs.berkeley.edu/~ksen">Koushik Sen</a>. 
+<p>I am a fourth year Ph.D. candidate at the University of California, Berkeley, advised by <a href="http://people.eecs.berkeley.edu/~ksen">Koushik Sen</a>. 
 My research interests centre around improving, or helping developers to improve, 
 the correctness, reliability, and understanding of software systems. I am particularly
 interested in developing automated methods for engineering tasks such as testing, debugging, and
@@ -56,6 +60,24 @@ Combined Honours Computer Science and Mathematics) at the University of British 
     <h3> Current </h3>
 </section>
 <table class="inner">
+
+<tr>
+<td style = "width:25%" align="center">
+<img src="autopandas_logo.png" alt="AutoPandas" width="200">
+</td>
+<td align="justify">
+Modern Python APIs are complex and very difficult to learn. Novice users could ask their API questions on StackOverflow, but the answer might be slow to arrive or unpersonalized... enter AutoPandas. AutoPandas is a programming-by-example synthesis engine for the Python API pandas, in particular for its dataframe transformations. To handle the complex space of API programs, AutoPandas uses a novel <a href="https://github.com/rbavishi/atlas">neural-backed generator</a> approach to synthesizing programs in the pandas API. You can try out AutoPandas live at <a href="https://autopandas.io">autopandas.io</a>.
+</td></tr>
+
+<tr>
+<td style = "width:25%" align="center">
+<img src="fuzzfact_logo.png" alt="FuzzFactory" width="250">
+</td>
+<td align="justify">
+ <a href="https://github.com/rohanpadhye/FuzzFactory">FuzzFactory</a> is an extension of AFL that generalizes coverage-guided fuzzing to domain-specific testing goals. FuzzFactory allows users to guide the fuzzer's search process without having to modify the core search algorithm. FuzzFactory's key abstraction is that of waypoints: intermediate inputs that are saved during the fuzzing loop. For example, PerfFuzz saves inputs that increase loop execution counts, a magic-byte fuzzer may save inputs that have partially correct magic bytes, or a directed fuzzer may save inputs that are more likely to exercise a program point of interest.
+
+</td></tr>
+
 <tr>
 <td style = "width:25%" align="center">
 <img src="zest_logo.svg" alt="Zest" height="160">
@@ -131,19 +153,29 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 <div class="inner">
 <ul>
 
+<li> Rohan Bavishi, <b>Caroline Lemieux</b>, Roy Fox, Koushik Sen, Ion Stoica. AutoPandas: Neural-Backed Generators for Program Synthesis 
+<i> OOPSLA 2019</i>.
+<a href="autopandas_oopsla19.pdf">pdf</a>.
+</li>
+
+<li> Rohan Padhye, <b>Caroline Lemieux</b>, Koushik Sen, Laurent Simon, Hayawardh Vijayakumar. FuzzFactory: Domain-Specific Fuzzing with Waypoints. 
+<i> OOPSLA 2019</i>.
+<a href="fuzzfactory_oopsla19.pdf">pdf</a>.
+</li>
+
 <li>
-Domagoj Babic, Stefan Bucur, Yaohui Chen, Franjo Ivancic, Tim King, Markus Kusano, <b>Caroline Lemieux</b>, László Szekeres, Wei Wang. FUDGE: Fuzz Driver Generation at Scale. In <i>Proceedings of the 2019 27th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering, ESEC/FSE 2019</i> (Industry Track).
+Domagoj Babic, Stefan Bucur, Yaohui Chen, Franjo Ivancic, Tim King, Markus Kusano, <b>Caroline Lemieux</b>, László Szekeres, Wei Wang. FUDGE: Fuzz Driver Generation at Scale. In <i>Proceedings of the 2019 27th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering, ESEC/FSE 2019</i> (Industry Track). <b>ACM/SIGSOFT Best Paper Award of ESEC/FSE Industry Track</b>.
 <a href="https://ai.google/research/pubs/pub48314">pdf</a>.
 </li>
 
-<li> Rohan Padhye, <b>Caroline Lemieux</b>, Koushik Sen. JQF: Coverage-Guided Property-Based Testing in Java. In <i>Proceedings of the 28th International Symposium on Software Testing and Analysis, ISSTA 2019</i> (Tool Demo Track). <a href="jqf_issta19.pdf">pdf</a>.</li>
+<li> Rohan Padhye, <b>Caroline Lemieux</b>, Koushik Sen. JQF: Coverage-Guided Property-Based Testing in Java. In <i>Proceedings of the 28th International Symposium on Software Testing and Analysis, ISSTA 2019</i> (Tool Demo Track). <b>ACM/SIGSOFT Tool Demonstration Award</b>. <a href="jqf_issta19.pdf">pdf</a>.</li>
 
-<li> Rohan Padhye, <b>Caroline Lemieux</b>, Koushik Sen, Mike Papadakis, Yves Le Traon. Semantic Fuzzing with Zest. In <i>Proceedings of the 28th International Symposium on Software Testing and Analysis, ISSTA 2019</i>. <a href="zest_issta19.pdf">pdf</a>.</li>
+<li> Rohan Padhye, <b>Caroline Lemieux</b>, Koushik Sen, Mike Papadakis, Yves Le Traon. Semantic Fuzzing with Zest. In <i>Proceedings of the 28th International Symposium on Software Testing and Analysis, ISSTA 2019</i>. <b>ACM/SIGSOFT Distinguished Artifact Award</b>. <a href="zest_issta19.pdf">pdf</a>.</li>
 
 <li> Rohan Bavishi, <b>Caroline Lemieux</b>, Neel Kant, Roy Fox, Koushik Sen, Ion Stoica. Neural Inference of API Functions from Input–Output Examples. In <a href="http://mlforsystems.org"><i>Workshop on ML for Systems at NeurIPS 2018</i></a>. <a href="autopandas_mlforsys18.pdf">pdf</a>, <a href="autopandas_mlforsys18_slides.pdf">slides</a>.</li>
 
 <li><b>Caroline Lemieux</b> and Koushik Sen. FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage. In <i>Proceedings of the 33rd IEEE/ACM International Conference on Automated Software Engineering, ASE 2018</i>.  <a href="fairfuzz-ase18.pdf">pdf</a>, <a href="fairfuzz_ase18_slides.pdf">slides</a>.</li>
-<li><b>Caroline Lemieux</b>, Rohan Padhye, Koushik Sen, and Dawn Song. PerfFuzz: Automatically Generating Pathological Inputs. In <i>Proceedings of the 27th ACM SIGSOFT International Symposium on Software Testing and Analysis, ISSTA 2018</i>. <b>Distinguished Paper Award</b>. <a href="perffuzz-issta2018.pdf">pdf</a>, <a href="perffuzz_issta18_final_slides.pdf">slides</a>.</li>
+<li><b>Caroline Lemieux</b>, Rohan Padhye, Koushik Sen, and Dawn Song. PerfFuzz: Automatically Generating Pathological Inputs. In <i>Proceedings of the 27th ACM SIGSOFT International Symposium on Software Testing and Analysis, ISSTA 2018</i>. <b>ACM/SIGSOFT Distinguished Paper Award</b>. <a href="perffuzz-issta2018.pdf">pdf</a>, <a href="perffuzz_issta18_final_slides.pdf">slides</a>.</li>
 <li><b>Caroline Lemieux</b>, Dennis Park and Ivan Beschastnikh. General LTL Specification Mining. In <i>Proceedings of the 30th International Conference on Automated Software Engineering, ASE 2015</i>, Lincoln, USA. 
     <a href="texada-ase15_final.pdf">pdf</a>,
     <a href="ASE15-texada-slides.pdf">slides</a>.</li>
