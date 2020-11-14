@@ -71,3 +71,24 @@ header h1, p {
 ul li {
   padding: 0.3em;
 }
+
+
+/* unvisited link */
+a:link {
+  color: #0129A1;
+}
+
+/* visited link */
+a:visited {
+  color: royalblue;
+}
+/* mouse over link */
+/*a:hover {
+  color: hotpink;
+}*/
+
+
+/* selected link */
+a:active {
+  color: slategrey;
+}
