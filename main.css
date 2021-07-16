@@ -1,11 +1,15 @@
 body {
-    background-color:#eceaef;
+    background-color:#cec9c6;
+    font-family: 'Open Sans', sans-serif;
 }
 td {
     padding:15px;
 }
+.bold_text {
+    font-weight: 700;
+}
+
 .main {
-    font-family: 'A Sans', sans-serif;
     background-color:white;
     color:black;
     margin-left:auto;
@@ -56,7 +60,7 @@ header {
 	margin-left:auto;
   margin-right:auto;
 	padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 	width:90%; 
 }
 
