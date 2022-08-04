@@ -1,128 +1,614 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" type="text/css" href="../main.css">
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="../main.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="main">
+  <div class="main">
 
-<title>Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis</title>
+    <title>Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis</title>
 
-<table id="main">
+    <table id="main">
 
-<tr><td style="padding-bottom: 20px">
-<h1>Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis</h1>
+      <tr>
+        <td style="padding-bottom: 20px">
+          <h1>Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis</h1>
 
-<p style="margin-bottom:-8px; color:gray"><small>CPSC 539L, Winter Term 1 2022, Instructor: Caroline Lemieux (clemieux@cs.ubc.ca)</small></p>
-<p style="margin-bottom:-8px;color:gray"><small>Mon/Wed 10:30AM-12:00PM, DMP 101, <a href="https://courses.students.ubc.ca/cs/courseschedule?sesscd=W&pname=subjarea&tname=subj-section&course=539L&sessyr=2022&section=101&dept=CPSC">UBC course page</a></small></p>
+          <p style="margin-bottom:-8px; color:gray"><small>CPSC 539L, Winter Term 1 2022, Instructor: Caroline Lemieux
+              (clemieux@cs.ubc.ca)</small></p>
+          <p style="margin-bottom:-8px;color:gray"><small>Mon/Wed 10:30AM-12:00PM, DMP 101, <a
+                href="https://courses.students.ubc.ca/cs/courseschedule?sesscd=W&pname=subjarea&tname=subj-section&course=539L&sessyr=2022&section=101&dept=CPSC">UBC
+                course page</a></small></p>
 
-</br>
+          </br>
 
-</td></tr>
+        </td>
+      </tr>
 
-<tr>
-  <td>
-    <h3 style="color:Navy">(05/27) This webpage is under construction; syllabus and grading scheme are subject to change. </h3>
-  </td>
-</tr>
+      <tr>
+        <td>
+          <h3 style="color:Navy">(08/02) This webpage is under construction; syllabus and grading scheme are subject to
+            change. </h3>
+        </td>
+      </tr>
 
-<tr><td>
+      <tr>
+        <td>
 
-<h2>Course description</h2>
-<div class="hbar"></div>
+          <h2>Course description</h2>
+          <div class="hbar"></div>
 
-<section class="inner">
-<p>Software bugs remain pervasive in modern software systems. As software becomes increasingly intertwined in all aspects of our lives, the consequences of these bugs become increasingly severe. For instance, since the mid 2010s, several important security vulnerabilities have emerged from basic correctness bugs in software (e.g. <a href="https://heartbleed.com/">Heartbleed</a>, <a href="https://en.wikipedia.org/wiki/Cloudbleed">Cloudbleed</a>, <a href="https://en.wikipedia.org/wiki/Shellshock_(software_bug)">Shellshock</a> ). Though not all bugs cause important security vulnerabilities, their overall cost remains high: one estimate puts the cost of dealing with software failures and defects <i>in the United States alone</i> in 2018 at nearly USD$1,540,000,000---the worldwide impact of these defects is even more severe.
-</p>
+          <section class="inner">
+            <p>Software bugs remain pervasive in modern software systems. As software becomes increasingly intertwined
+              in all aspects of our lives, the consequences of these bugs become increasingly severe. For instance,
+              since the mid 2010s, several important security vulnerabilities have emerged from basic correctness bugs
+              in software (e.g. <a href="https://heartbleed.com/">Heartbleed</a>, <a
+                href="https://en.wikipedia.org/wiki/Cloudbleed">Cloudbleed</a>, <a
+                href="https://en.wikipedia.org/wiki/Shellshock_(software_bug)">Shellshock</a> ). Though not all bugs
+              cause important security vulnerabilities, their overall cost remains high: one estimate puts the cost of
+              dealing with software failures and defects <i>in the United States alone</i> in 2018 at nearly
+              USD$1,540,000,000---the worldwide impact of these defects is even more severe.
+            </p>
 
-<p>
-While human-written tests are a prevailing method for assuring the quality of software in practice, they are still subject to human error, and allowing bugs to slip through the cracks that the human tester did not consider. This class will explore topics in the field of <i>automated testing</i>, which aims, at a high-level, to reduce the developer burden in discovering bugs and writing test cases. Recent advances in this field leverage static and dynamic information from the program under test in order to effectively explore the space of behaviors of the program under test, enabling the quick discovery of <a href="https://www.openssl.org/news/secadv/20160926.txt">potentially severe security bugs</a>. 
-</p>
+            <p>
+              While human-written tests are a prevailing method for assuring the quality of software in practice, they
+              are still subject to human error, and allowing bugs to slip through the cracks that the human tester did
+              not consider. This class will explore topics in the field of <i>automated testing</i>, which aims, at a
+              high-level, to reduce the developer burden in discovering bugs and writing test cases. Recent advances in
+              this field leverage static and dynamic information from the program under test in order to effectively
+              explore the space of behaviors of the program under test, enabling the quick discovery of <a
+                href="https://www.openssl.org/news/secadv/20160926.txt">potentially severe security bugs</a>.
+            </p>
+
+            <p>The concerns of scalable bug detection and program debugging require innovation from multiple different
+              fronts.
+              As such, this course will cover papers from Software Engineering, Programming Languages, Security, and
+              Systems venues.</p>
 
 
-<h4>Course-level learning goals</h4>
+            <h4>Course-level learning goals</h4>
 
-The course will provide an opportunity for participants to:
-<ul>
-  <li>Become familiar with key techniques used in automated testing tools (including concolic execution, coverage-guided fuzz testing, search-based algorithms);</li>
-  <li>Critically evaluate research papers in the field of program testing and analysis;</li>
-  <li>Program automated testing tools in Python;</li>
-  <li>Design and conduct experimental evaluation of a program testing or analysis tool.</li>
-</ul>
-</section>
-</td></tr>
+            The course will provide an opportunity for participants to:
+            <ul>
+              <li>Become familiar with key techniques used in automated testing tools (including concolic execution,
+                coverage-guided fuzz testing, search-based algorithms);</li>
+              <li>Critically evaluate research papers in the field of program testing and analysis;</li>
+              <li>Program automated testing tools in Python;</li>
+              <li>Design and conduct experimental evaluation of a program testing or analysis tool.</li>
+            </ul>
+          </section>
+        </td>
+      </tr>
 
-<tr>
-  <td>
-<h2>Format</h2>
-<div class="hbar"></div>
+      <tr>
+        <td>
+          <h2>Format</h2>
+          <div class="hbar"></div>
 
-<section class="inner">
-<p>This is a seminar-style class, which is primarily driven by in-class discussion of papers (1-2 per class). Each student is expected to submit an evaluation of the paper(s) being discussed in the class ahead of the class in which it is discussed. Each student will also serve as discussion lead for 1-2 papers, depending on class enrolment; the discussion lead will read through other student's responses and prepare questions to start the discussion.</p>
+          <section class="inner">
+            <p>This is a seminar-style class, which is primarily driven by in-class discussion of a research paper. Each
+              student is expected to submit an evaluation of the paper being discussed in the class
+              ahead of the class in which it is discussed. Each student will also serve as discussion lead for 1-2
+              papers, depending on class enrolment; the discussion lead will read through other student's responses and
+              prepare questions to start the discussion.</p>
 
-<p>In addition to readings, there will be one or two programming assignments, which will give you the opportunity to implement and evaluate some of the test generation algorithms we will explore in papers. 
-</p>
+            <p>In addition to readings, there will be a programming assignment, which will give students the
+              opportunity to implement and evaluate some of the test generation algorithms we will explore in papers.
+            </p>
 
-<p>
-The bulk of your course mark will come from an open-ended course project. The project can be conducted as part of a team. I will provide suggestions for a few potential projects early in the semester, or you can propose a project close to your interests that intersects with topics in debugging, program analysis, and testing. The project deliverables include an initial proposal, an in-class presentation of the work, and a final report summarizing what has been achieved. 
-</p>
-<p>The scope of acceptable projects is broad; developing a new tool for testing in a particular domain, tweaking an existing algorithm, an extensive re-evaluation of an existing tool, or reimplementation of an algorithm in a new domain. The projects should involve an empirical experimental component. Feel free to set up a meeting with me prior to the inital proposal stage. 
-</p>
+            <p>
+              The bulk of your course mark will come from an open-ended course project. The project can be conducted as
+              part of a team. I will provide suggestions for a few potential projects early in the semester, or you can
+              propose a project close to your interests that intersects with topics in debugging, program analysis, and
+              testing. The project deliverables include an initial proposal, an in-class presentation of the work, and a
+              final report summarizing what has been achieved.
+            </p>
+            <p>
+              The scope of acceptable projects is broad; developing a new tool for testing in a particular domain,
+              tweaking an existing algorithm, an extensive re-evaluation of an existing tool, or reimplementation of an
+              algorithm in a new domain.
+              You are encouraged to find a project which is in line with your broader
+              research goals.
+              Feel free to set up a meeting with me prior to the inital proposal stage.
+            </p>
 
-</section>
-</tr>
-</td>
+          </section>
+      </td>
+      </tr>
 
-<td>
-<h2>Schedule (Tentative)</h2>
-<div class="hbar"></div>
 
-<section class="inner">
 
-<p><i>Note: this section will be populated with an exact list of papers closer to the start of the semester.</i></p>
+      <td>
+        <h2>Schedule (Tentative)</h2>
+        <div class="hbar"></div>
 
-<p>
-Time permitting, we will cover the following topics:
-<ul>
-  <li>Symbolic/Concolic Execution</li>
-  <li>Coverage-Guided Greybox Fuzzing</li>
-  <li>Property-Based Testing (a.k.a. Generator Based Fuzzing)</li>
-  <li>Test Suite Generation Techniques</li>
-  <li>Delta Debugging</li>
-  <li>Concurrency Testing</li>
-  <li>Input Structure Inference</li>
-  <li>Scalability of the above techniques</li>
-  </ul>
-</p>
-</section>
-</tr>
-</td>
+        <section class="inner">
 
-<tr>
-  <td>
-    <p style="margin-bottom:-8px; color:gray"><small>This course is loosely based off of Koushik Sen's 2016 offering of <a href="https://people.eecs.berkeley.edu/~ksen/cs29415fall16.html">CS 294-15</a>.</small></p>
-  </td>
-</tr>
+          <p><i>Note: this schedule is still subject to change.</i></p>
 
-<script type="text/javascript">
 
-<!--
+          <table id="schedule">
+
+            <tr>
+
+              <td class="date"></td>
+              <td class="topic" rowspan=2>
+                Course overview, introductions
+              </td>
+              <td class="reading">
+                <small>
+                  You do not need to write a response for first-day-of-class readings. <br />
+                </small>
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Wed Sep 7</td>
+              <td class="reading">
+
+
+                <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">How
+                  to Read a Paper</a>, Srinivasan Keshav.<br />
+
+
+                <b>Assignment Released.</b> Intructions link to be added. <br />
+
+              </td>
+              <td class="discussant">
+                DL: Caroline
+              </td>
+
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Sep 12</td>
+              <td class="topic" rowspan=2>
+                Random and Coverage-Guided Fuzzing (a.k.a. Blackbox and Greybox Fuzzing)
+              </td>
+              <td class="reading">
+
+                Barton P. Miller, Lars Fredriksen, Bryan So. <a href="https://dl.acm.org/doi/10.1145/96267.96279">An
+                  Empirical Study of the Reliability of UNIX Utilities</a>. Communications of the ACM, 1990.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Wed Sep 14</td>
+              <td class="reading">
+
+                Marcel Böhme, Valentin J.M. Manès, Sang Kil Cha. <a
+                  href="https://mboehme.github.io/paper/FSE20.Entropy.pdf"> Boosting Fuzzer Efficiency:
+                  An Information Theoretic Perspective </a>. ESEC/FSE 2020.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Sep 19</td>
+              <td class="topic" rowspan=2>
+                Structured Fuzzing (a.k.a. generator/grammar-based fuzzing, property-based testing)
+              </td>
+              <td class="reading">
+
+                Koen Claessen, John Hughes. <a href="https://www.cs.tufts.edu/~nr/cs257/archive/john-hughes/quick.pdf">
+                  QuickCheck: A Lightweight Tool for Random Testing of Haskell Programs</a>. ICFP 2000.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Wed Sep 21</td>
+              <td class="reading">
+
+                Christian Holler, Kim Herzig, Andreas Zeller. <a
+                  href="https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final73.pdf"> Fuzzing with
+                  Code Fragments </a>. USENIX Security 2012. <br />
+                <br />
+
+                <b>Assignment due Friday Sep 23 18:00 PT.</b> <br />
+              </td>
+              <td class="discussant">
+
+              </td>
+
+            </tr>
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Sep 26</td>
+              <td class="topic" rowspan=2>
+                Symbolic and Concolic Execution (a.k.a. Whitebox Fuzzing)
+              </td>
+              <td class="reading">
+
+                Koushik Sen, Darko Marinov, Gul Agha. <a
+                  href="https://mir.cs.illinois.edu/marinov/publications/SenETAL05CUTE.pdf">
+                  CUTE: A Concolic Unit Testing Engine for C</a>, ESEC/FSE 2005.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Wed Sep 28</td>
+              <td class="reading">
+
+                Cristian Cadar, Daniel Dunbar, Dawson Engler. <a
+                  href="https://llvm.org/pubs/2008-12-OSDI-KLEE.pdf">KLEE:
+                  Unassisted and Automatic Generation of High-Coverage
+                  Tests for Complex Systems Programs</a>, OSDI 2008.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+
+            </tr>
+
+
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Oct 3</td>
+              <td class="topic" rowspan=2>
+                Combined Fuzzing
+              </td>
+              <td class="reading">
+                Rohan Padhye, Caroline Lemieux, Koushik Sen, Mike Papadakis, Yves Le Traon. <a
+                  href="https://www.carolemieux.com/zest_issta19.pdf">Semantic Fuzzing with Zest</a>, ISSTA 2019.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <td class="date">Wed Oct 5</td>
+            <td class="reading">
+
+              Patrice Godefroid, Adam Kiezun, Michael Y. Levin. <a
+                href="https://patricegodefroid.github.io/public_psfiles/pldi2008.pdf">Grammar-Based Whitebox
+                Fuzzing</a>, PLDI 2008.
+
+            </td>
+            <td class="discussant">
+
+            </td>
+
+            </tr>
+
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Oct 10</td>
+              <td class="topic" rowspan=2>
+                Evaluating Random Algorithms
+              </td>
+              <td class="reading">
+                <i>Thanksgiving Day. No class.</i>
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Wed Oct 12</td>
+              <td class="reading">
+
+                Andrea Arcuri, Lionel Briand. <a
+                  href="https://www.simula.no/sites/default/files/publications/Simula.approve.64.pdf">A Practical Guide
+                  for Using Statistical Tests to Assess Randomized Algorithms in Software Engineering</a>, ICSE 2011.
+                <br />
+                <br />
+
+                <b>Project Proposal due Friday Oct 14 18:00 PT.</b> <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Oct 17</td>
+              <td class="topic" rowspan=2>
+                Test Suite Generation
+              </td>
+              <td class="reading">
+
+                Carlos Pacheco, Shuvendu K. Lahiri, Michael D. Ernst, Thomas Ball. <a
+                  href="https://homes.cs.washington.edu/~mernst/pubs/feedback-testgen-icse2007.pdf">
+                  Feedback-directed Random Test Generation</a>. ICSE 2007.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Oct 19</td>
+              <td class="reading">
+
+                Gordon Fraser, Andrea Arcuri . <a
+                  href="https://www.evosuite.org/wp-content/papercite-data/pdf/qsic11.pdf"> Evolutionary Generation of
+                  Whole Test Suites </a>. International Conference On Quality Software (QSIC) 2011. <br />
+                <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Oct 24</td>
+              <td class="topic" rowspan=2>
+                Static Analysis
+              </td>
+              <td class="reading">
+
+                Lloyd D. Fosdick, Leon J. Osterwell. <a href="https://dl.acm.org/doi/10.1145/356674.356676">
+                  Data Flow Analysis in Software Reliability</a>, ACM Computing Surveys, 1976.
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Oct 26</td>
+              <td class="reading">
+
+                Brian Hackett, Manuvir Das, Daniel Wang, Zhe Yang. <a
+                  href="http://groups.csail.mit.edu/pag/OLD/parg/hackett06modular.pdf"> Modular Checking for Buffer
+                  Overflows in The Large </a>, ICSE 2006. <br />
+                <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Oct 31</td>
+              <td class="topic" rowspan=2>
+                Dynamic Analysis
+              </td>
+              <td class="reading">
+                Hiralal Agrawal, Jospeh R. Horgan. <a
+                  href="http://www.cs.columbia.edu/~junfeng/08fa-e6998/sched/readings/slicing.pdf"> Dynamic Program
+                  Slicing </a>, PLDI 1990. <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Nov 2</td>
+              <td class="reading">
+
+                James Newsome, Dawn Song. <a href="https://valgrind.org/docs/newsome2005.pdf">
+                  Dynamic Taint Analysis for Automatic Detection, Analysis,
+                  and Signature Generation of Exploits on Commodity Software</a>, NDSS 2005. <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Nov 07</td>
+              <td class="topic" rowspan=2>
+                Delta Debugging
+              </td>
+              <td class="reading">
+                Andreas Zeller, Ralf Hilderbrandt. <a
+                  href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=988498"> Simplifying and Isolating
+                  Failure-Inducing Input </a>, IEEE TSE 2002. <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Nov 09</td>
+              <td class="reading">
+                <i> Midterm break. No class. </i>
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Nov 14</td>
+              <td class="topic" rowspan=2>
+                Synthesizing Input Structures
+              </td>
+              <td class="reading">
+                Rahul Gopinath, Björn Mathis, Andreas Zeller. <a
+                  href="https://publications.cispa.saarland/3101/1/fse2020-mimid.pdf"> Mining Input Grammars from
+                  Dynamic Control Flow Input </a>, ESEC/FSE 2020. <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Nov 16</td>
+              <td class="reading">
+
+                Tim Blazytko, Cornelius Aschermann, Moritz Schlögel, Ali Abbasi, Sergej Schumilo,
+                Simon Wörner, and Thorsten Holz. <a href="https://www.usenix.org/system/files/sec19-blazytko.pdf">
+                  GRIMOIRE: Synthesizing Structure While Fuzzing</a>, USENIX Security 2019.
+                   
+                  <br/>
+                  <br/>
+                  <b>Project Check-in due Friday Nov 18 18:00 PT.</b> <br /> 
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Nov 21</td>
+              <td class="topic" rowspan=2>
+                Debugging Concurrent Programs
+              </td>
+              <td class="reading">
+                Robert O'Callahan, Jong-Deok Choi. <a
+                  href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.9536&rep=rep1&type=pdf">Hybrid
+                  Dynamic Data Race Detection </a>, PPoPP 2003. <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Nov 23</td>
+              <td class="reading">
+                Guangpu Li, Shuan Lu, Madanlal Musuthavi, Suman Nath, Rohan Padhye. <a
+                  href="https://rohan.padhye.org/files/tsvd-sosp19.pdf"> Efficient Scalable Thread-Safety-Violation
+                  Detection </a>, SOSP 2019.
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Nov 28</td>
+              <td class="topic" rowspan=2>
+                Scaling Bug-Detection Systems
+              </td>
+              <td class="reading">
+                Insu Yun, Sangho Lee, Meng Xu, Yeongjin Jang, Taesoo Kim. <a
+                  href="https://www.usenix.org/conference/usenixsecurity18/presentation/yun">QSYM : A Practical Concolic
+                  Execution Engine Tailored for Hybrid Fuzzing </a>, USENIX Security 2018. <br />
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Nov 30</td>
+              <td class="reading">
+                Fraser Brown, Deian Stefan, Dawson Engler. <a
+                  href="https://cseweb.ucsd.edu/~dstefan/pubs/brown:2020:sys.pdf">Sys: a Static/Symbolic Tool for
+                  Finding Good Bugs in Good (Browser) Code </a>, USENIX Security 2020.
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Mon Dec 05</td>
+              <td class="topic" rowspan=2>
+                
+              </td>
+              <td class="reading">
+                <i>Project presentations </i>
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Wed Dec 07</td>
+              <td class="reading">
+                <i>Project presentations </i>
+
+                <br/>
+                <br/>
+                <b> Project Report due Friday December 16 18:00PM PT.</b>
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+
+          </table>
+
+
+      </td>
+      </tr>
+
+
+
+      </section>
+      </tr>
+      </td>
+
+      <tr>
+        <td>
+          <p style="margin-bottom:-8px; color:gray"><small>This course is loosely based off of Koushik Sen's 2016
+              offering of <a href="https://people.eecs.berkeley.edu/~ksen/cs29415fall16.html">CS 294-15</a>.</small></p>
+        </td>
+      </tr>
+
+      <script type="text/javascript">
+
+< !--
 var m = "Last updated: " + document.lastModified;
-var p = m.length-8;
-document.writeln('<p id="update">');
-document.write(m.substring(p, 0));
-document.writeln("</p>");
- -->
-</script>
+        var p = m.length - 8;
+        document.writeln('<p id="update">');
+        document.write(m.substring(p, 0));
+        document.writeln("</p>");
+        -->
+      </script>
 </body>
+
 </html>

@@ -1,0 +1,63 @@
+#schedule {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    padding: 15px 15px 15px;
+    cellpadding: 15px;
+    border: 1px solid;
+    border-color: #4e4e4e;
+    rules: none;
+    frame: box;
+    border: 0;
+    cellspacing: 0;
+    border-spacing: 0;
+}
+
+td.date {
+    width: 8%;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+td.topic {
+    width: 10%;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    border-left: 2px solid #4e4e4e;
+    background-color:white
+    border-bottom: 2px solid #4e4e4e;
+}
+
+td.reading {
+    width: 70%;
+    padding: 15px;
+    border-left: 2px solid #4e4e4e;
+}
+
+td.discussant {
+    font-size: 11px;
+    width: 17%;
+    padding: 15px;
+    border-left: 2px solid #4e4e4e;
+}
+
+#schedule tr:nth-child(4n-1) {
+    background-color: #ebebeb;
+}
+
+#schedule tr:nth-child(4n) {
+    background-color: white;
+}
+
+#schedule tr:nth-child(4n+1) {
+    background-color: #d8e0f4;
+}
+
+#schedule tr:nth-child(4n+2) {
+    background-color: white;
+}
