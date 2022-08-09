@@ -38,7 +38,7 @@
 
       <tr>
         <td>
-          <h3 style="color:Navy">(08/02) This webpage is under construction; syllabus and grading scheme are subject to
+          <h3 style="color:Navy">(08/08) This webpage is under construction; syllabus and grading scheme are subject to
             change. </h3>
         </td>
       </tr>
@@ -98,9 +98,9 @@
 
           <section class="inner">
             <p>This is a seminar-style class, which is primarily driven by in-class discussion of a research paper. Each
-              student is expected to submit an evaluation of the paper being discussed in the class
-              ahead of the class in which it is discussed. Each student will also serve as discussion lead for 1-2
-              papers, depending on class enrolment; the discussion lead will read through other student's responses and
+              student is expected to submit an evaluation of the paper being discussed in the class-
+              ahead of the class in which it is discussed. Each student will also serve as discussion lead for 1
+              paper; the discussion lead will read through other student's responses and
               prepare questions to start the discussion.</p>
 
             <p>In addition to readings, there will be a programming assignment, which will give students the
@@ -123,6 +123,19 @@
               Feel free to set up a meeting with me prior to the inital proposal stage.
             </p>
 
+            <h3>Grading (Tentative)</h3>
+            <ul>
+              <li>Paper Responses: 20%</li>
+              <li>In-class Participation: 10%</li>
+              <li>Discussion Lead: 5%</li>
+              <li>Assignment: 12.5%</li>
+              <li>Project Proposal: 10% </li>
+              <li>Project Check-in: 2.5%</li>
+              <li>Project Presentation: 10%</li>
+              <li>Project Writeup: 30%</li>
+
+            </ul>
+
           </section>
       </td>
       </tr>
@@ -140,28 +153,14 @@
 
           <table id="schedule">
 
-            <tr>
-
-              <td class="date"></td>
-              <td class="topic" rowspan=2>
-                Course overview, introductions
-              </td>
-              <td class="reading">
-                <small>
-                  You do not need to write a response for first-day-of-class readings. <br />
-                </small>
-              </td>
-              <td class="discussant">
-
-              </td>
-            </tr>
 
             <tr>
               <td class="date">Wed Sep 7</td>
+
               <td class="reading">
+                <i> Course Overview, Introductions </i> <br/> <br/>
 
-
-                <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">How
+                <i>Optional Reading:</i> <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">How
                   to Read a Paper</a>, Srinivasan Keshav.<br />
 
 
@@ -177,17 +176,18 @@
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Sep 12</td>
-              <td class="topic" rowspan=2>
-                Random and Coverage-Guided Fuzzing (a.k.a. Blackbox and Greybox Fuzzing)
-              </td>
               <td class="reading">
+
+                <i> Random (a.k.a. Blackbox) Fuzzing </i> <br/> <br/>
 
                 Barton P. Miller, Lars Fredriksen, Bryan So. <a href="https://dl.acm.org/doi/10.1145/96267.96279">An
                   Empirical Study of the Reliability of UNIX Utilities</a>. Communications of the ACM, 1990.
 
+                  <br/>
+
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
 
@@ -195,13 +195,18 @@
               <td class="date">Wed Sep 14</td>
               <td class="reading">
 
-                Marcel Böhme, Valentin J.M. Manès, Sang Kil Cha. <a
-                  href="https://mboehme.github.io/paper/FSE20.Entropy.pdf"> Boosting Fuzzer Efficiency:
-                  An Information Theoretic Perspective </a>. ESEC/FSE 2020.
+                <i>Coverage-Guided (Greybox) Fuzzing; Generator-Based Fuzzing (Property-based testing). </i> <br/><br/>
+
+                Lecture; no reading.
+  
+                <!-- Koen Claessen, John Hughes. <a href="https://www.cs.tufts.edu/~nr/cs257/archive/john-hughes/quick.pdf">
+                  QuickCheck: A Lightweight Tool for Random Testing of Haskell Programs</a>. ICFP 2000. -->
+
+                  <!-- -->
 
               </td>
               <td class="discussant">
-
+                DL: Caroline
               </td>
 
             </tr>
@@ -209,17 +214,17 @@
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Sep 19</td>
-              <td class="topic" rowspan=2>
-                Structured Fuzzing (a.k.a. generator/grammar-based fuzzing, property-based testing)
-              </td>
               <td class="reading">
 
-                Koen Claessen, John Hughes. <a href="https://www.cs.tufts.edu/~nr/cs257/archive/john-hughes/quick.pdf">
-                  QuickCheck: A Lightweight Tool for Random Testing of Haskell Programs</a>. ICFP 2000.
+                <i>Information-theoretic approaches to fuzzing. </i> <br/><br/>
+                   Marcel Böhme, Valentin J.M. Manès, Sang Kil Cha. <a
+                  href="https://mboehme.github.io/paper/FSE20.Entropy.pdf"> Boosting Fuzzer Efficiency:
+                  An Information Theoretic Perspective </a>. ESEC/FSE 2020.
+
 
               </td>
               <td class="discussant">
-
+                DL: 
               </td>
             </tr>
 
@@ -227,14 +232,20 @@
               <td class="date">Wed Sep 21</td>
               <td class="reading">
 
-                Christian Holler, Kim Herzig, Andreas Zeller. <a
-                  href="https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final73.pdf"> Fuzzing with
-                  Code Fragments </a>. USENIX Security 2012. <br />
-                <br />
 
-                <b>Assignment due Friday Sep 23 18:00 PT.</b> <br />
+                <i>Combining Coverage-Guided and Generator-Based Fuzzing. </i> <br/><br/>
+
+                  Rohan Padhye, Caroline Lemieux, Koushik Sen, Mike Papadakis, Yves Le Traon. <a
+                    href="https://www.carolemieux.com/zest_issta19.pdf">Semantic Fuzzing with Zest</a>, ISSTA 2019.
+  
+  
+                <br />  <br />
+
+                <b>Assignment due Friday Sep 23 18:00 PT.</b>
+                
               </td>
               <td class="discussant">
+                DL:
 
               </td>
 
@@ -244,18 +255,20 @@
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Sep 26</td>
-              <td class="topic" rowspan=2>
-                Symbolic and Concolic Execution (a.k.a. Whitebox Fuzzing)
-              </td>
               <td class="reading">
 
-                Koushik Sen, Darko Marinov, Gul Agha. <a
-                  href="https://mir.cs.illinois.edu/marinov/publications/SenETAL05CUTE.pdf">
-                  CUTE: A Concolic Unit Testing Engine for C</a>, ESEC/FSE 2005.
+                <i>
+                  Grammar-Based Fuzzing
+                </i> <br/><br/>
+
+                Christian Holler, Kim Herzig, Andreas Zeller. <a
+                href="https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final73.pdf"> Fuzzing with
+                Code Fragments</a>, USENIX Security 2012. <br />
+
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
 
@@ -263,14 +276,19 @@
               <td class="date">Wed Sep 28</td>
               <td class="reading">
 
-                Cristian Cadar, Daniel Dunbar, Dawson Engler. <a
-                  href="https://llvm.org/pubs/2008-12-OSDI-KLEE.pdf">KLEE:
-                  Unassisted and Automatic Generation of High-Coverage
-                  Tests for Complex Systems Programs</a>, OSDI 2008.
+
+                <i>Intro to Concolic + Symbolic Execution</i> <br/><br/>
+
+                
+                <b>Only read Sections I., II., IV.</b>
+                Edward J. Schwartz, Thanassis Avgerinos, David Brumley. <a
+                href="https://users.ece.cmu.edu/~aavgerin/papers/Oakland10.pdf"> All You Ever Wanted to Know About
+                Dynamic Taint Analysis and Forward Symbolic Execution
+                (but might have been afraid to ask) </a>. OAKLAND 2010. <br />
 
               </td>
               <td class="discussant">
-
+                DL: Caroline
               </td>
 
             </tr>
@@ -281,28 +299,37 @@
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Oct 3</td>
-              <td class="topic" rowspan=2>
-                Combined Fuzzing
-              </td>
               <td class="reading">
-                Rohan Padhye, Caroline Lemieux, Koushik Sen, Mike Papadakis, Yves Le Traon. <a
-                  href="https://www.carolemieux.com/zest_issta19.pdf">Semantic Fuzzing with Zest</a>, ISSTA 2019.
-
+                <i>
+                  Concolic Execution 
+                </i> <br/> <br/>
+  
+                  Koushik Sen, Darko Marinov, Gul Agha. <a
+                    href="https://mir.cs.illinois.edu/marinov/publications/SenETAL05CUTE.pdf">
+                    CUTE: A Concolic Unit Testing Engine for C</a>, ESEC/FSE 2005.
+  
               </td>
               <td class="discussant">
+                DL: 
+              </td>
 
               </td>
             </tr>
             <td class="date">Wed Oct 5</td>
             <td class="reading">
+              <i>
+                Symbolic Execution
+              </i> <br/> <br/>
 
-              Patrice Godefroid, Adam Kiezun, Michael Y. Levin. <a
-                href="https://patricegodefroid.github.io/public_psfiles/pldi2008.pdf">Grammar-Based Whitebox
-                Fuzzing</a>, PLDI 2008.
+                 
+              Cristian Cadar, Daniel Dunbar, Dawson Engler. <a
+                href="https://llvm.org/pubs/2008-12-OSDI-KLEE.pdf">KLEE:
+                Unassisted and Automatic Generation of High-Coverage
+                Tests for Complex Systems Programs</a>, OSDI 2008. 
 
             </td>
             <td class="discussant">
-
+              DL:
             </td>
 
             </tr>
@@ -312,9 +339,7 @@
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Oct 10</td>
-              <td class="topic" rowspan=2>
-                Evaluating Random Algorithms
-              </td>
+       
               <td class="reading">
                 <i>Thanksgiving Day. No class.</i>
               </td>
@@ -327,17 +352,20 @@
               <td class="date">Wed Oct 12</td>
               <td class="reading">
 
-                Andrea Arcuri, Lionel Briand. <a
-                  href="https://www.simula.no/sites/default/files/publications/Simula.approve.64.pdf">A Practical Guide
-                  for Using Statistical Tests to Assess Randomized Algorithms in Software Engineering</a>, ICSE 2011.
-                <br />
-                <br />
+
+
+                <i>Hybrid Fuzzing</i> <br/><br/>
+
+                Insu Yun, Sangho Lee, Meng Xu, Yeongjin Jang, Taesoo Kim. <a
+                href="https://www.usenix.org/conference/usenixsecurity18/presentation/yun">QSYM : A Practical Concolic
+                Execution Engine Tailored for Hybrid Fuzzing </a>, USENIX Security 2018. <br />
+
 
                 <b>Project Proposal due Friday Oct 14 18:00 PT.</b> <br />
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
 
             </tr>
@@ -345,110 +373,133 @@
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Oct 17</td>
-              <td class="topic" rowspan=2>
-                Test Suite Generation
-              </td>
+            
               <td class="reading">
 
-                Carlos Pacheco, Shuvendu K. Lahiri, Michael D. Ernst, Thomas Ball. <a
-                  href="https://homes.cs.washington.edu/~mernst/pubs/feedback-testgen-icse2007.pdf">
-                  Feedback-directed Random Test Generation</a>. ICSE 2007.
+
+                <i>Evaluating Random Algorithms</i>  <br/> <br/>
+                Andrea Arcuri, Lionel Briand. <a
+                  href="https://www.simula.no/sites/default/files/publications/Simula.approve.64.pdf">A Practical Guide
+                  for Using Statistical Tests to Assess Randomized Algorithms in Software Engineering</a>, ICSE 2011.
+                <br />
+                <br />
+
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
             <tr>
               <td class="date">Wed Oct 19</td>
               <td class="reading">
 
-                Gordon Fraser, Andrea Arcuri . <a
-                  href="https://www.evosuite.org/wp-content/papercite-data/pdf/qsic11.pdf"> Evolutionary Generation of
-                  Whole Test Suites </a>. International Conference On Quality Software (QSIC) 2011. <br />
-                <br />
+
+
+                <i>Random Test Suite Generation</i><br/><br/>
+
+                Carlos Pacheco, Shuvendu K. Lahiri, Michael D. Ernst, Thomas Ball. <a
+                  href="https://homes.cs.washington.edu/~mernst/pubs/feedback-testgen-icse2007.pdf">
+                  Feedback-directed Random Test Generation</a>. ICSE 2007.
+
+
 
               </td>
               <td class="discussant">
-
+                DL: 
               </td>
             </tr>
 
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Oct 24</td>
-              <td class="topic" rowspan=2>
-                Static Analysis
-              </td>
               <td class="reading">
 
-                Lloyd D. Fosdick, Leon J. Osterwell. <a href="https://dl.acm.org/doi/10.1145/356674.356676">
-                  Data Flow Analysis in Software Reliability</a>, ACM Computing Surveys, 1976.
+
+                <i>Evolutionary Test Suite Generation</i><br/><br/>
+
+                Gordon Fraser, Andrea Arcuri . <a
+                  href="https://www.evosuite.org/wp-content/papercite-data/pdf/qsic11.pdf"> Evolutionary Generation of
+                  Whole Test Suites </a>. International Conference On Quality Software (QSIC) 2011. <br />
+                <br /> 
+
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
             <tr>
               <td class="date">Wed Oct 26</td>
               <td class="reading">
 
-                Brian Hackett, Manuvir Das, Daniel Wang, Zhe Yang. <a
-                  href="http://groups.csail.mit.edu/pag/OLD/parg/hackett06modular.pdf"> Modular Checking for Buffer
-                  Overflows in The Large </a>, ICSE 2006. <br />
+                  <i>Intro to Taint Tracking</i> <br/><br/>
+
+                
+                  <b>Read Section III. (You may want to recap Section II.)</b>
+                  Edward J. Schwartz, Thanassis Avgerinos, David Brumley. <a
+                  href="https://users.ece.cmu.edu/~aavgerin/papers/Oakland10.pdf"> All You Ever Wanted to Know About
+                  Dynamic Taint Analysis and Forward Symbolic Execution
+                  (but might have been afraid to ask)</a>. OAKLAND 2010. <br />
+  
+
                 <br />
 
               </td>
               <td class="discussant">
-
+                DL: Caroline
               </td>
             </tr>
 
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Oct 31</td>
-              <td class="topic" rowspan=2>
-                Dynamic Analysis
-              </td>
               <td class="reading">
-                Hiralal Agrawal, Jospeh R. Horgan. <a
-                  href="http://www.cs.columbia.edu/~junfeng/08fa-e6998/sched/readings/slicing.pdf"> Dynamic Program
-                  Slicing </a>, PLDI 1990. <br />
+
+
+                <i>Taint Tracking</i> <br/> <br/>
+
+                James Newsome, Dawn Song. <a href="https://valgrind.org/docs/newsome2005.pdf">
+                  Dynamic Taint Analysis for Automatic Detection, Analysis,
+                  and Signature Generation of Exploits on Commodity Software</a>, NDSS 2005. <br />
+
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
             <tr>
               <td class="date">Wed Nov 2</td>
               <td class="reading">
 
-                James Newsome, Dawn Song. <a href="https://valgrind.org/docs/newsome2005.pdf">
-                  Dynamic Taint Analysis for Automatic Detection, Analysis,
-                  and Signature Generation of Exploits on Commodity Software</a>, NDSS 2005. <br />
+
+              <i>Taint Tracking for Input Structure Inference</i><br/><br/>
+
+              Matthias Höschele, Andreas Zeller. <a href="https://www.st.cs.uni-saarland.de/models/autogram/ase2016-autogram.pdf">Mining Input Grammars from Dynamic Taints</a>, ASE 2016 NIER.
+                   
+
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
 
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Nov 07</td>
-              <td class="topic" rowspan=2>
-                Delta Debugging
-              </td>
+
               <td class="reading">
-                Andreas Zeller, Ralf Hilderbrandt. <a
-                  href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=988498"> Simplifying and Isolating
-                  Failure-Inducing Input </a>, IEEE TSE 2002. <br />
+
+                <i>Dataflow Analysis</i><br/><br/>
+
+                Thomas Reps, Susan Horwitz, and Mooly Sagiv. <a
+                  href="http://groups.csail.mit.edu/pag/OLD/parg/hackett06modular.pdf"> Precise Interprocedural Dataflow Analysis via Graph Reachability</a>, POPL 1995. <br />
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
             <tr>
@@ -461,102 +512,122 @@
               </td>
             </tr>
 
+
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Nov 14</td>
-              <td class="topic" rowspan=2>
-                Synthesizing Input Structures
-              </td>
               <td class="reading">
-                Rahul Gopinath, Björn Mathis, Andreas Zeller. <a
-                  href="https://publications.cispa.saarland/3101/1/fse2020-mimid.pdf"> Mining Input Grammars from
-                  Dynamic Control Flow Input </a>, ESEC/FSE 2020. <br />
+
+                <i>Applications of Dataflow Analysis</i><br/><br/>
+
+                Brian Hackett, Manuvir Das, Daniel Wang, Zhe Yang. <a
+                  href="http://groups.csail.mit.edu/pag/OLD/parg/hackett06modular.pdf"> Modular Checking for Buffer
+                  Overflows in The Large</a>, ICSE 2006. <br />
+
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
             <tr>
               <td class="date">Wed Nov 16</td>
               <td class="reading">
 
-                Tim Blazytko, Cornelius Aschermann, Moritz Schlögel, Ali Abbasi, Sergej Schumilo,
-                Simon Wörner, and Thorsten Holz. <a href="https://www.usenix.org/system/files/sec19-blazytko.pdf">
-                  GRIMOIRE: Synthesizing Structure While Fuzzing</a>, USENIX Security 2019.
-                   
-                  <br/>
-                  <br/>
-                  <b>Project Check-in due Friday Nov 18 18:00 PT.</b> <br /> 
+  
+                  <i>Input Grammar Synthesis from Control Flow</i><br/><br/>
+  
+                  Rahul Gopinath, Björn Mathis, Andreas Zeller. <a
+                    href="https://publications.cispa.saarland/3101/1/fse2020-mimid.pdf"> Mining Input Grammars from
+                    Dynamic Control Flow Input</a>, ESEC/FSE 2020. <br />
+    
+
+
+                <b>Project Check-in due Friday Nov 18 18:00 PT.</b> <br /> 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
+
 
 
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Nov 21</td>
-              <td class="topic" rowspan=2>
-                Debugging Concurrent Programs
-              </td>
               <td class="reading">
-                Robert O'Callahan, Jong-Deok Choi. <a
-                  href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.9536&rep=rep1&type=pdf">Hybrid
-                  Dynamic Data Race Detection </a>, PPoPP 2003. <br />
+
+
+                <i> Delta Debugging </i> <br/> <br/>
+
+                Andreas Zeller, Ralf Hilderbrandt. <a
+                  href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=988498"> Simplifying and Isolating
+                  Failure-Inducing Input</a>, IEEE TSE 2002. <br />
+  
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
             <tr>
               <td class="date">Wed Nov 23</td>
               <td class="reading">
-                Guangpu Li, Shuan Lu, Madanlal Musuthavi, Suman Nath, Rohan Padhye. <a
-                  href="https://rohan.padhye.org/files/tsvd-sosp19.pdf"> Efficient Scalable Thread-Safety-Violation
-                  Detection </a>, SOSP 2019.
-              </td>
-              <td class="discussant">
+
+
+                <i>Bug Detection in Concurrent Programs</i><br/><br/>
+
+                Robert O'Callahan, Jong-Deok Choi. <a
+                  href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.9536&rep=rep1&type=pdf">Hybrid
+                  Dynamic Data Race Detection</a>, PPoPP 2003. <br />
 
               </td>
+              <td class="discussant">
+                DL:
+              </td>
             </tr>
+
+
+
 
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Nov 28</td>
-              <td class="topic" rowspan=2>
-                Scaling Bug-Detection Systems
-              </td>
+   
               <td class="reading">
-                Insu Yun, Sangho Lee, Meng Xu, Yeongjin Jang, Taesoo Kim. <a
-                  href="https://www.usenix.org/conference/usenixsecurity18/presentation/yun">QSYM : A Practical Concolic
-                  Execution Engine Tailored for Hybrid Fuzzing </a>, USENIX Security 2018. <br />
+
+                <i>Scalable Bug Detection in Concurrent Programs</i><br/><br/>
+
+                Guangpu Li, Shuan Lu, Madanlal Musuthavi, Suman Nath, Rohan Padhye. <a
+                  href="https://rohan.padhye.org/files/tsvd-sosp19.pdf"> Efficient Scalable Thread-Safety-Violation
+                  Detection</a>, SOSP 2019.
 
               </td>
               <td class="discussant">
-
+                DL:
               </td>
             </tr>
             <tr>
               <td class="date">Wed Nov 30</td>
               <td class="reading">
+
+                <i>Scalable Bug Detection via Static Analysis + Symbolic Execution</i><br/><br/>
+    
                 Fraser Brown, Deian Stefan, Dawson Engler. <a
                   href="https://cseweb.ucsd.edu/~dstefan/pubs/brown:2020:sys.pdf">Sys: a Static/Symbolic Tool for
-                  Finding Good Bugs in Good (Browser) Code </a>, USENIX Security 2020.
-              </td>
-              <td class="discussant">
+                  Finding Good Bugs in Good (Browser) Code</a>, USENIX Security 2020.
+
 
               </td>
+              <td class="discussant">
+                DL:
+              </td>
             </tr>
+
 
             <!-----WEEK------->
             <tr>
               <td class="date">Mon Dec 05</td>
-              <td class="topic" rowspan=2>
-                
-              </td>
               <td class="reading">
                 <i>Project presentations </i>
 
