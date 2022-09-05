@@ -36,12 +36,6 @@
         </td>
       </tr>
 
-      <tr>
-        <td>
-          <h3 style="color:Navy">(08/19) This webpage is under construction; syllabus and grading scheme are subject to
-            change. </h3>
-        </td>
-      </tr>
 
       <tr>
         <td>
@@ -98,17 +92,17 @@
 
           <section class="inner">
             <p>This is a seminar-style class, which is primarily driven by in-class discussion of a research paper. Each
-              student is expected to submit an evaluation of the paper being discussed in the class-
-              ahead of the class in which it is discussed. Each student will also serve as discussion lead for 1
-              paper; the discussion lead will read through other student's responses and
+              student is expected to submit a <a href="#responses">response</a> to the paper being discussed in the class
+              18 hours ahead of the class in which it is discussed. Each student will also serve as discussion lead for 1
+              paper; the discussion lead will read through other students' responses and
               prepare questions to start the discussion.</p>
 
-            <p>In addition to readings, there will be a programming assignment, which will give you the
+            <p>In addition to readings, there will be a <a href="#assign">programming assignment</a>, which will give you the
               opportunity to implement and evaluate some of the test generation algorithms we will explore in papers.
             </p>
 
             <p>
-              The bulk of your course mark will come from an open-ended course project. The project can be conducted as
+              The bulk of your course mark will come from an <a href="#project">open-ended course project</a>. The project can be conducted as
               part of a team.  The project deliverables include an initial proposal, an in-class presentation of the work, and a
               final report summarizing what has been achieved.
             </p>
@@ -178,10 +172,13 @@
                   Empirical Study of the Reliability of UNIX Utilities</a>. Communications of the ACM, 1990.
 
                   <br/>
-
+                  <br/>
+<small>
+                  <i>Optional reading (do not write a response, though may help give you more persepective on the first reading):</i> Update for the 2020s: <a href="https://arxiv.org/pdf/2008.06537.pdf">The Relevance of Classic Fuzz Testing: Have We Solved This One?</a><br/>
+</small>
               </td>
               <td class="discussant">
-                DL:
+                DL: Caroline
               </td>
             </tr>
 
@@ -252,12 +249,12 @@
               <td class="reading">
 
                 <i>
-                  Grammar-Based Fuzzing
+                  Compiler Fuzzing
                 </i> <br/><br/>
 
-                Christian Holler, Kim Herzig, Andreas Zeller. <a
-                href="https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final73.pdf"> Fuzzing with
-                Code Fragments</a>, USENIX Security 2012. <br />
+                Xuejun Yang, Yang Chen, Eric Eide, John Regehr. <a
+                href="https://www.cs.utah.edu/~regehr/papers/pldi11-preprint.pdf">Finding and Understanding Bugs in C Compilers</a>, PLDI 2011. <br />
+                
 
 
               </td>
@@ -486,7 +483,7 @@
 
               <td class="reading">
 
-                <i>Dataflow Analysis</i><br/><br/>
+                <i>Foundations of Dataflow Analysis</i><br/><br/>
 
                 Thomas Reps, Susan Horwitz, and Mooly Sagiv. <a
                   href="https://pages.cs.wisc.edu/~fischer/cs701.f14/popl95.pdf"> Precise Interprocedural Dataflow Analysis via Graph Reachability</a>, POPL 1995. <br />
@@ -512,7 +509,7 @@
               <td class="date">Mon Nov 14</td>
               <td class="reading">
 
-                <i>Applications of Dataflow Analysis</i><br/><br/>
+                <i>Checking Array Indexing with Dataflow Analysis</i><br/><br/>
 
                 Brian Hackett, Manuvir Das, Daniel Wang, Zhe Yang. <a
                   href="http://groups.csail.mit.edu/pag/OLD/parg/hackett06modular.pdf"> Modular Checking for Buffer
@@ -529,12 +526,10 @@
               <td class="reading">
 
   
-                  <i>Input Grammar Synthesis from Control Flow</i><br/><br/>
+                  <i>Checking Array Indexing with Dependent Types</i><br/><br/>
   
-                  Rahul Gopinath, Björn Mathis, Andreas Zeller. <a
-                    href="https://publications.cispa.saarland/3101/1/fse2020-mimid.pdf"> Mining Input Grammars from
-                    Dynamic Control Flow Input</a>, ESEC/FSE 2020. <br />
-    
+                  Martin Kellogg, Vlastimil Dort, Suzanne Millstein, Michael D. Ernst. <a
+                    href="https://homes.cs.washington.edu/~mernst/pubs/array-indexing-issta2018.pdf">Lightweight Verification of Array Indexing</a>, ISSTA 2018. <br /> <br/>
 
 
                 <b>Project Check-in due Friday Nov 18 18:00 PT.</b> <br /> 
@@ -659,7 +654,7 @@
         <td>
 
           <h2>Paper Responses</h2>
-          <div class="hbar"></div>
+          <div class="hbar" id="responses"></div>
 
           <section class="inner">
             <p>
@@ -713,7 +708,7 @@
             <p>
             Your paper responses will be submitted as follow-up discussions to each paper's post on the <a href="
             piazza.com/ubc.ca/winterterm12022/cpsc539l">course Piazza</a>. 
-            You should not read other student's response before writing your own. After posting your response, you may engage with other students' reponses, e.g. answering a clarification question someone else had.
+            You should not read other students' response before writing your own. After posting your response, you may engage with other students' reponses, e.g. answering a clarification question someone else had.
             </p>
 
 
@@ -725,7 +720,7 @@
         <td>
 
           <h2>Assignment</h2>
-          <div class="hbar"></div>
+          <div class="hbar" id="assign"></div>
 
           <section class="inner">
          
@@ -742,7 +737,7 @@
         <td>
 
           <h2>Project</h2>
-          <div class="hbar"></div>
+          <div class="hbar" id="project"></div>
 
           <section class="inner">
          
@@ -750,7 +745,7 @@
             The course project constitutes the majority of the course grade. The project is open-ended; the purpose of the project
             is to give you the opportunity to conduct research in the field of program analysis, debugging, or automated testing.
             You may pursue the project alone, though I recommend you do it in groups of 2-4; this will give you the opportunity 
-            to conduct a project with broader impact
+            to conduct a project with broader impact.
           </p>
           
           <p>
@@ -762,9 +757,9 @@
           If you are not sure if a project is in scope, feel free to set up a meeting with me prior to submitting the project proposal.
         </p>
 
-        <p> </p>
+        <p>(Sep 2nd Update): I will post some project ideas here soon.</p>
         
-
+        <h3>Deliverables</h3>
           <p>
             <b>Proposal.</b>
             Your project proposal should roughly follow this structure, adapting to the nature of your project (new tool vs. replication vs. benchmark creation):
