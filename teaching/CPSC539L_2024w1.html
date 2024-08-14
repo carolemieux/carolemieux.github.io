@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="../main.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="main">
+
+    <title>Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis</title>
+
+    <table id="main">
+
+      <tr>
+        <td style="padding-bottom: 20px">
+          <h1>Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis</h1>
+
+          <p style="margin-bottom:-8px; color:gray"><small>CPSC 539L, Winter Term 1 2024, Instructor: Caroline Lemieux
+              (clemieux@cs.ubc.ca)</small></p>
+          <p style="margin-bottom:-8px;color:gray"><small>Tu/Th 12:30PM-2:00PM, ORCH 4058 </small></p>
+          <p style="margin-bottom:-8px;color:gray"><small>Office hours by appointment, email Caroline</small></p>
+          </br>
+
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+
+          <h2>Course description</h2>
+          <div class="hbar"></div>
+
+          <section class="inner">
+            <p>Software bugs remain pervasive in modern software systems. As software becomes increasingly intertwined
+              in all aspects of our lives, the consequences of these bugs become increasingly severe. For instance,
+              since the mid 2010s, several important security vulnerabilities have emerged from basic correctness bugs
+              in software (e.g. <a href="https://heartbleed.com/">Heartbleed</a>, <a
+                href="https://en.wikipedia.org/wiki/Cloudbleed">Cloudbleed</a>, <a
+                href="https://en.wikipedia.org/wiki/Shellshock_(software_bug)">Shellshock</a> ). Though not all bugs
+              cause important security vulnerabilities, their overall cost remains high: one estimate puts the cost of
+              dealing with software failures and defects <i>in the United States alone</i> in 2018 at nearly
+              USD$1,540,000,000---the worldwide impact of these defects is even more severe.
+            </p>
+
+            <p>
+              While human-written tests are a prevailing method for assuring the quality of software in practice, they
+              are still subject to human error, and allowing bugs to slip through the cracks that the human tester did
+              not consider. This class will explore topics in the field of <i>automated testing</i>, which aims, at a
+              high-level, to reduce the developer burden in discovering bugs and writing test cases. Recent advances in
+              this field leverage static and dynamic information from the program under test in order to effectively
+              explore the space of behaviors of the program under test, enabling the quick discovery of <a
+                href="https://www.openssl.org/news/secadv/20160926.txt">potentially severe security bugs</a>.
+            </p>
+
+            <p>The concerns of scalable bug detection and program debugging require innovation from multiple different
+              fronts.
+              As such, this course will cover papers from Software Engineering, Programming Languages, Security, and
+              Systems venues.</p>
+
+
+            <h4>Course-level learning goals</h4>
+
+            After the course, participants should be able to:
+            <ul>
+              <li> <i>Describe</i> the problems solved by the following techniques, <i>recognize</i> the scenarios in which each technique can be used, and <i>analyze</i> the pros and cons of each technique, for the following techniques:
+                <ul>
+                  <li> Test-input generation: blackbox fuzzing, greybox fuzzing, symbolic execution</li>
+                  <li> Test oracles: crashing oracles, differential oracles, automated test-oracle generation</li>
+                  <li> Property-based testing </li>
+                  <li> Whole test-suite generation </li>
+                  <li> Pattern-based Static Analysis</li>
+                  <li> Fault Localization </li>
+                  <li> Dynamic Data Race Detection</li>
+                </ul>
+              </li>
+              <li><i>Identify</i> contributions and room for improvement in existing research papers;</li>
+              <li><i>Debate</i> the positives and negatives of existing research papers; </li>
+              <li><i>Categorize</i> and <i>summarize</i> concerns and questions about existing research papers</li>
+              <li><i>Design</i> and <i>conduct</i> the experimental evaluation of a program testing or analysis tool.</li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h2>Format</h2>
+          <div class="hbar"></div>
+
+          <section class="inner">
+            <p>This is a seminar-style class, which is primarily driven by in-class discussion of a research paper. Each
+              student is expected to submit a <a href="#responses">response</a> to the paper being discussed in the class
+              18 hours ahead of the class in which it is discussed. Each student will also serve as discussion lead for 1
+              paper; the discussion lead will read through other students' responses and
+              prepare questions to start the discussion.</p>
+
+
+            <p>
+              The bulk of your course mark will come from an <a href="#project">open-ended course project</a>. The project is strongly encouraged be conducted as
+               a team of 2-4 students. Students may ask for exceptions to conduct individual projects   The project deliverables include an initial proposal, a project check-in, an in-class presentation of the work, and a
+              final report summarizing what has been achieved.
+            </p>
+
+
+            <h3>Grading (Subject to Change)</h3>
+            <ul>
+              <li>Paper Responses: 22.5%</li>
+              <li>In-class Participation: 14%</li>
+              <li>First day of class attendance: 1%</li>
+              <li>Discussion Lead: 7.5%</li>
+              <li>Project Proposal: 12.5% </li>
+              <li>Project Check-in: 2.5%</li>
+              <li>Project Presentation: 10%</li>
+              <li>Project Writeup: 30%</li>
+
+            </ul>
+
+          </section>
+      </td>
+      </tr>
+
+
+
+      <td>
+        <h2>Schedule (Subject to change)</h2>
+        <div class="hbar"></div>
+
+        <section class="inner">
+
+          <p><i>Note: this schedule is still subject to change.</i></p>
+
+
+          <table id="schedule">
+
+            <tr>
+              <td class="date">Tue Sep 3</td>
+
+              <td class="reading">
+                <i>Imagine UBC Day. <b>No class.</b></i> 
+
+              </td>
+              <td class="discussant">
+              </td>
+
+            </tr>
+            <tr>
+              <td class="date">Thu Sep 5</td>
+
+              <td class="reading">
+                <i> Course Overview, Introductions </i> <br/> <br/>
+
+                <i>Optional Reading (do not write a response):</i> <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">How
+                  to Read a Paper</a>, Srinivasan Keshav.<br />
+
+                <i>Sign up for course piazza: <a href="TODO">
+                  piazza.com/ubc.ca/winterterm12022/cpsc539l</a>. </i> <br/>
+
+                <p>Link to <a href="TODO">slides</a> from class.</p>
+
+
+              </td>
+              <td class="discussant">
+                DL: Caroline
+              </td>
+
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Sep 10</td>
+              <td class="reading">
+
+                <i> Random (a.k.a. Blackbox) Fuzzing </i> <br/> <br/>
+
+                Barton P. Miller, Mengxiao Zhang, and Elisa R. Heymann. 2022. <a href="https://doi.org/10.1109/TSE.2020.3047766">The Relevance of Classic Fuzz Testing: Have We Solved This One?</a>
+                 IEEE Trans. Softw. Eng. 48, 6 (June 2022), 2028–2039. 
+
+
+                  <br/>
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Thu Sep 12</td>
+              <td class="reading">
+
+                <i>Coverage-Guided (Greybox) Fuzzing </i> <br/><br/>
+                To add: Small intro to coverage-guided fuzzing. 
+                <br/>
+                <br/>
+                Andrea Fioraldi, Alessandro Mantovani, Dominik Maier, and Davide Balzarotti. 2023. 
+                <a href="https://doi.org/10.1145/3580596">Dissecting American Fuzzy Lop: A FuzzBench Evaluation.</a> ACM Trans. Softw. Eng. Methodol. 32, 2, Article 52 (March 2023), 26 pages. 
+
+
+                  <!-- -->
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Sep 17</td>
+              <td class="reading">
+		            <i>Property-Based Testing (aka Generator-Based Fuzzing). </i>
+                <br/>
+                <br/>
+                Koen Claessen and John Hughes. 2000. <a href="https://doi.org/10.1145/351240.351266">QuickCheck: a lightweight tool for random testing of Haskell programs.</a> In Proceedings of the fifth ACM SIGPLAN international conference on Functional programming (ICFP '00). Association for Computing Machinery, New York, NY, USA, 268–279. 
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Thu Sep 19</td>
+              <td class="reading">
+
+
+
+                <i>Combining Coverage-Guided and Generator-Based Fuzzing. </i> <br/><br/>
+
+                Rohan Padhye, Caroline Lemieux, Koushik Sen, Mike Papadakis, and Yves Le Traon. 2019. <a href="https://doi.org/10.1145/3293882.3330576">Semantic fuzzing with zest.</a> In Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2019). Association for Computing Machinery, New York, NY, USA, 329–340. 
+  
+              </td>
+              <td class="discussant">
+                DL: 
+
+              </td>
+
+            </tr>
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Sep 24</td>
+              <td class="reading">
+
+                <i>
+                  Symbolic Execution
+                </i> <br/><br/>
+
+                Cristian Cadar, Daniel Dunbar, and Dawson Engler. 2008. <a href="https://dl.acm.org/doi/10.5555/1855741.1855756">KLEE: unassisted and automatic generation of high-coverage tests for complex systems programs.</a> In Proceedings of the 8th USENIX conference on Operating systems design and implementation (OSDI'08). USENIX Association, USA, 209–224.
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Thu Sep 26</td>
+              <td class="reading">
+
+                <i>Dynamic Symbolic Execution (Concolic Execution)</i> <br/><br/>
+
+                Koushik Sen, George Necula, Liang Gong, and Wontae Choi. 2015. <a href="https://doi.org/10.1145/2786805.2786830">MultiSE: multi-path symbolic execution using value summaries.</a> In Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2015). Association for Computing Machinery, New York, NY, USA, 842–853. 
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+
+            </tr>
+
+
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Oct 3</td>
+              <td class="reading">
+                <i>
+                  Neural Networks + Fuzzing
+                </i> <br/> <br/>
+  
+                D. She, K. Pei, D. Epstein, J. Yang, B. Ray and S. Jana. 2019. 
+                <a href="https://doi.org/10.1109/SP.2019.00052">NEUZZ: Efficient Fuzzing with Neural Program Smoothing. 
+
+                </a> 2019 IEEE Symposium on Security and Privacy (SP). San Francisco, CA, USA, pp. 803-817.
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+
+              </td>
+            </tr>
+            <td class="date">Thu Oct 5</td>
+            <td class="reading">
+              <i>
+                Neural Networks + Fuzzing Continued
+              </i> <br/> <br/>
+
+                 
+              Maria-Irina Nicolae, Max Eisele, and Andreas Zeller. 2023. 
+              <a href= "https://doi.org/10.1145/3611643.3616308">Revisiting Neural Program Smoothing for Fuzzing.</a> 
+              In Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2023). Association for Computing Machinery, New York, NY, USA, 133–145.
+
+            </td>
+            <td class="discussant">
+              DL: 
+            </td>
+
+            </tr>
+
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Oct 08</td>
+       
+              <td class="reading">
+                <i>Beating Magic Bytes.</i> <br/> <br/>
+
+                Cornelius Aschermann, Sergej Schumilo, Tim Blazytko, Robert Gawlik, Thorsten Holz. 2019. 
+                <a href="https://www.ndss-symposium.org/ndss-paper/redqueen-fuzzing-with-input-to-state-correspondence/">REDQUEEN: Fuzzing with Input-to-State Correspondence.</a> 
+                In Proceedings of Nedtwork and Distributed System SecuritySymposium, NDSS'19.
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td class="date">Thu Oct 10</td>
+              <td class="reading">
+
+
+
+                <i>Evaluating Randomized Algorithms.</i> <br/><br/>
+
+                Andrea Arcuri and Lionel Briand. 2011. 
+                <a href="https://doi.org/10.1145/1985793.1985795">A practical guide for using statistical tests to assess randomized algorithms in software engineering.</a> 
+                In Proceedings of the 33rd International Conference on Software Engineering (ICSE '11). Association for Computing Machinery, New York, NY, USA, 1–10. 
+
+
+              </td>
+              <td class="discussant">
+                DL:
+              </td>
+
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Oct 15</td>
+            
+              <td class="reading">
+
+
+                <i>Whole Test Suite Generation</i>  <br/> <br/>
+                Carlos Pacheco, Shuvendu K. Lahiri, Michael D. Ernst, and Thomas Ball. 2007. 
+                <a href="https://doi.org/10.1109/ICSE.2007.37">Feedback-Directed Random Test Generation.</a>
+                In Proceedings of the 29th international conference on Software Engineering (ICSE '07). IEEE Computer Society, USA, 75–84. 
+                <br />
+                <br />
+
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Oct 17</td>
+              <td class="reading">
+
+
+
+                <i> Test Suite Generation + LLMs</i><br/><br/>
+
+                Caroline Lemieux, Jeevana Priya Inala, Shuvendu K. Lahiri, and Siddhartha Sen. 2023. 
+                <a href="https://doi.org/10.1109/ICSE48619.2023.00085">CodaMosa: Escaping Coverage Plateaus in Test Generation with Pre-Trained Large Language Models.</a> 
+                In Proceedings of the 45th International Conference on Software Engineering (ICSE '23). IEEE Press, 919–931. 
+
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Oct 22</td>
+              <td class="reading">
+
+
+                <i>Test Oracle Generation</i><br/><br/>
+
+                Elizabeth Dinella, Gabriel Ryan, Todd Mytkowicz, and Shuvendu K. Lahiri. 2022. 
+                <a href="https://doi.org/10.1145/3510003.3510141">TOGA: a neural method for test oracle generation. </a>
+                In Proceedings of the 44th International Conference on Software Engineering (ICSE '22). Association for Computing Machinery, New York, NY, USA, 2130–2141. 
+
+
+              </td>
+              <td class="discussant">
+                DL:  
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Oct 24</td>
+              <td class="reading">
+
+                  <i>Project Work Day</i> 
+  
+
+                <br />
+
+              </td>
+              <td class="discussant">
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Oct 29</td>
+              <td class="reading">
+
+
+                <i>Pattern-Based Static Analysis</i> <br/> <br/>
+
+                David Hovemeyer and William Pugh. 2004. 
+                <a href="https://doi.org/10.1145/1052883.1052895">Finding bugs is easy.</a> SIGPLAN Not. 39, 12 (December 2004), 92–106.
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Oct 31</td>
+              <td class="reading">
+
+
+              <i>Type-Annotation Static Analysis</i><br/><br/>
+
+              Martin Kellogg, Vlastimil Dort, Suzanne Millstein, and Michael D. Ernst. 2018. 
+              <a href="https://doi.org/10.1145/3213846.3213849">Lightweight verification of array indexing. /a>
+              In Proceedings of the 27th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2018). Association for Computing Machinery, New York, NY, USA, 3–14. 
+
+              </td>
+              <td class="discussant">
+                DL:  
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Nov 05</td>
+
+              <td class="reading">
+
+                <i>Delta-Debugging</i><br/><br/>
+
+                Andreas Zeller and Ralf Hildebrandt. 2002. 
+                <a href="https://doi.org/10.1109/32.988498">Simplifying and Isolating Failure-Inducing Input.</a> 
+                IEEE Trans. Softw. Eng. 28, 2 (February 2002), 183–200. 
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Nov 07</td>
+              <td class="reading">
+                <i> Fault Localization. </i>
+                James A. Jones, Mary Jean Harrold, and John Stasko. 2002. Visualization of test information to assist fault localization. 
+                <a href="https://doi.org/10.1145/581339.581397"></a>In Proceedings of the 24th International Conference on Software Engineering (ICSE '02)</a>. Association for Computing Machinery, New York, NY, USA, 467–477. 
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Nov 12</td>
+              <td class="reading">
+
+                <i>Midterm Break. No Class</i><br/><br/>
+
+
+              </td>
+              <td class="discussant">
+                 
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Nov 14</td>
+              <td class="reading">
+
+  
+                  <i>Project Work Day</i>
+              </td>
+              <td class="discussant">
+              </td>
+            </tr>
+
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Nov 19</td>
+              <td class="reading">
+
+
+                <i> Compiler Testing </i> <br/> <br/>
+
+                Xuejun Yang, Yang Chen, Eric Eide, and John Regehr. 2011. 
+                <a href="https://doi.org/10.1145/1993498.1993532">Finding and understanding bugs in C compilers.</a> 
+                In Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '11). Association for Computing Machinery, New York, NY, USA, 283–294.
+  
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Nov 21</td>
+              <td class="reading">
+
+
+                <i>Compiler Testing in the Era of LLMs</i><br/><br/>
+
+                Chunqiu Steven Xia, Matteo Paltenghi, Jia Le Tian, Michael Pradel, and Lingming Zhang. 2024. 
+                <a href="https://doi.org/10.1145/3597503.3639121">Fuzz4All: Universal Fuzzing with Large Language Models.</a>
+                In Proceedings of the IEEE/ACM 46th International Conference on Software Engineering (ICSE '24). Association for Computing Machinery, New York, NY, USA, Article 126, 1–13. 
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+
+
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Nov 28</td>
+   
+              <td class="reading">
+
+                <i>Bug Detection in Concurrent Programs</i><br/><br/>
+
+                Robert O'Callahan and Jong-Deok Choi. 2003. 
+                <a href="https://doi.org/10.1145/781498.781528">Hybrid dynamic data race detection.</a> 
+                In Proceedings of the ninth ACM SIGPLAN symposium on Principles and practice of parallel programming (PPoPP '03). Association for Computing Machinery, New York, NY, USA, 167–178. 
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Nov 30</td>
+              <td class="reading">
+
+
+                <i>Scalable Bug Detection in Concurrent Programs</i><br/><br/>
+
+                Guangpu Li, Shan Lu, Madanlal Musuvathi, Suman Nath, and Rohan Padhye. 2019. 
+                <a href="https://doi.org/10.1145/3341301.3359638">Efficient scalable thread-safety-violation detection: finding thousands of concurrency bugs during testing.</a> 
+                In Proceedings of the 27th ACM Symposium on Operating Systems Principles (SOSP '19). Association for Computing Machinery, New York, NY, USA, 162–180. 
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue Dec 03</td>
+              <td class="reading">
+                <i>Project presentations </i>
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu Dec 07</td>
+              <td class="reading">
+                <i>Project presentations </i>
+
+              </td>
+              <td class="discussant">
+
+              </td>
+            </tr>
+
+
+          </table>
+
+
+      </td>
+      </tr>
+      </section>
+      </tr>
+      </td>
+
+      <tr>
+        <td>
+
+          <h2>Academic Honesty</h2>
+          <div class="hbar" id="assign"></div>
+
+          <section class="inner">
+         
+            <p> 
+You will receive <b>zero</b> on any written submission (paper response, proposal, final write-up) that is found to have plagiarised materials. This includes even a single plagiarized sentence. This includes plagiarism from other students, as well as from other research papers.  Refer to <a href="academic_honesty.html">this page</a> for more details on the definition of plagiarism, and tips on how to avoid it.</p>
+
+          </section>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+
+          <h2>Paper Responses</h2>
+          <div class="hbar" id="responses"></div>
+
+          <section class="inner">
+            <p>
+              Read each paper to the best of your ability before drafting your paper response. There are two goals to the paper responses:
+              <ul>
+                <li> Convey your understanding of the paper's core innovations
+                </li>
+                <li>
+                  Convey your opinion of the paper, in order to spark in-class discussion
+                </li>
+              </ul>
+              Structure your paper responses as:
+              <ul>
+              <li>
+                A short paragraph summarizing the paper. What is the problem being tackled? How was it adressed by prior work? What are the innovation(s) proposed in this paper? How are those innovations evaluated?
+              </li>
+              <li>
+                Your opinion of the paper, which can be structured in a paragraph or bullet points. Some questions to guide you as you read and write your response:
+                <ul>
+                  <li> 
+                    What remains unclear after reading the paper? Are there any clarification questions whose answers would substantially change your opinion of the paper?
+                  </li>
+                  <li>
+                    How does the paper's evaluation match with the proposed problem statement?
+                  </li>
+                  <li>
+                    Do you forsee any barriers to the applicability of the technique proposed in the paper? If so, how could these barriers be overcome?
+                  </li>
+                  <li>
+                    Which technical innovations are most compelling to you?
+                  </li>
+                  <li>
+                    Which problems remain unsolved after this paper?
+                  </li>
+              </ul>
+              </li>
+              </ul>
+              Remember, the responses help spark in-class discussion. Thus, specificity and depth in your responses is useful. 
+              A detailed description of a particular issue raised while reading the paper will be more useful than several high-level comments. 
+              For example, if you have doubts about the scalability of a particular technique, detail specific examples that raise those doubts, 
+              rather than simply saying  "I think the technique will not scale".
+              </p>
+
+
+            <p>
+            Paper responses must be submitted to the course Piazza <b>18 hours</b> before the class on which they are do. 
+            Thus, for Monday readings, your paper response should be submitted before 2:30pm on Sunday. For Wednesday readings,
+            they should be submitted before 2:30pm on Tuesday.
+            </p>
+
+            <p>
+            Your paper responses will be submitted as follow-up discussions to each paper's post on the <a href="
+            piazza.com/ubc.ca/winterterm12022/cpsc539l">course Piazza</a>. 
+            You should not read other students' response before writing your own. After posting your response, you may engage with other students' reponses, e.g. answering a clarification question someone else had.
+            </p>
+
+
+          </section>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+
+          <h2>Assignment</h2>
+          <div class="hbar" id="assign"></div>
+
+          <section class="inner">
+         
+            <p>
+            In the assignment, you will design and evaluate a coverage-guided fuzzer for Python. Refer to the <a href="CPSC539L_2022w1_assign_1.html">assignment webpage</a> for detailed instructions.
+            </p>
+
+          </section>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+
+          <h2>Project</h2>
+          <div class="hbar" id="project"></div>
+
+          <section class="inner">
+         
+          <p>
+            The course project constitutes the majority of the course grade. The project is open-ended; the purpose of the project
+            is to give you the opportunity to conduct research in the field of program analysis, debugging, or automated testing.
+            You may pursue the project alone, though I recommend you do it in groups of 2-4; this will give you the opportunity 
+            to conduct a project with broader impact.
+          </p>
+          
+          <p>
+          The scope of acceptable project topics is broad. You are encouraged to find a project with intersects with your 
+          own research interests or topic of specialization. But, your project should touch topics in debugging, program analysis, and
+          testing. You may consider a project where you: develop a new tool for testing/analyzing programs in a particular domain,
+          tweak an existing algorithm, conduct an extensive re-evaluation of an existing tool,  reimplement an
+          algorithm in a new domain, or create a benchmark suite.  
+          If you are not sure if a project is in scope, feel free to set up a meeting with me prior to submitting the project proposal.
+        </p>
+
+        <p> <b>Project Ideas</b> Here are some sample project ideas, of varying complexity (some may be better pursued in groups). You need not restrict yourself to these ideas.
+<ul>
+<li>Implement a choice-based backend to <a href="https://github.com/rohanpadhye/JQF">JQF</a> in order to make <a href="https://www.carolemieux.com/rlcheck_icse20.pdf">RLCheck</a> Guidance runnable on any arbitrary generator.</li>
+<li>Propose and evaluate a new state/reward framework for RLCheck.</li>
+<li>Run <a href="https://www.carolemieux.com/perffuzz-issta2018.pdf">PerfFuzz</a> on a broader benchmark set (i.e. programs not in its evaluation) and evaluate whether the inputs it finds truly represent performance problems.</li>
+<li>Collect a benchmark set of software patches. Evaluate the performance of <a href="https://mboehme.github.io/paper/CCS17.pdf">AFLGo</a>, <a href="https://dl.acm.org/doi/abs/10.1145/3243734.3243849">Hawkeye</a>, or other directed testing tools (e.g. <a href="https://dl.acm.org/doi/abs/10.1145/2491411.2491438">KATCH</a>, <a href="https://dl.acm.org/doi/10.1145/3208952">SHADOW</a>) on your new benchmark set.</li>
+<li>Develop an algorithm to dynamically infer type signatures from Python calls in order to improve <a href="https://github.com/se2p/pynguin">Automated Unit Test Generation</a> that relies on type signatures.</li>
+<li>Study and discuss the links between <a href="https://www.cs.swarthmore.edu/~meeden/DevelopmentalRobotics/lehman_ecj11.pdf">novelty search</a> and coverage-guided fuzzing. Construct toy benchmarks on which you can evaluate whether <a href="https://dl.acm.org/doi/pdf/10.1145/3321707.3321752">conclusions</a> about novelty search also apply to coverage-guided fuzzing.</li>
+</ul>
+</p>
+        
+        <h3>Deliverables</h3>
+          <p>
+            <b>Proposal.</b>
+            Your project proposal should roughly follow this structure, adapting to the nature of your project (new tool vs. replication vs. benchmark creation):
+            <ul>
+              <li> <b>Background. </b> What is the problem domain you are investigating? Why is the problem important?
+              </li>
+              <li> <b>Intended approach. </b> What, precisely, are you aiming to build or investigate in the project? What precise problem will you be solving?
+              </li>
+              <li> <b>Evaluation plan. </b>  If you are planning on running an experiment, how many benchmarks will you evaluate on? How long will you run your tool(s)? 
+              </li>
+              <!-- <li> <b>Division of tasks. </b> If you are working in a group, what is your  plan to divide work on the project?
+              </li> -->
+              <li> <b> Timeline. </b> Determine a timeline you will follow to achieve your implementation and experimental goals, as well as to deliver the writeup + presentation.
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            <b>Check-in.</b>
+              The check-in is nearly a month in to the project. It should outline the progress achieved so far. If the timeline's goals have 
+              not been reached so far, provide an updated timeline.  If, in starting the project, a different research direction has emerged
+              as the more interesting one to follow, the check-in provides a mechanism to update the proposal.
+          </p>
+
+
+          <h4>Presentation</h4> 
+          <p><i>Length.</i> For 1-person groups, the presentation should be 12 minutes + 3 minutes for questions. 
+            For 2-person groups, the presentation should be 16 minutes + 4 minutes for questions.
+            For 3 or 4-person groups, the presentation should be 25 minutes + 5 minutes for questions. 
+          </p>
+          <p> <i>Contents.</i> The final presentation should  convey:
+            <ul>
+            <li> <b>Background + Motivation </b> Why is this project important?
+            </li>
+            <li> <b>Key details of accomplished approach. </b> If you built a tool/algorithm: what are the key contributions of the tool/algorithm you built? If you are conducting an empirical investigation/case study: what methodology did you adopt? 
+            </li>
+            <li> <b>Evaluation Results + Conlcusion. </b> How did you evaluate your approach? What were the results? What are the high-level takeaways of these results?
+            </li>
+            </ul>
+          </p>
+          <p><i>Grading.</i> You will be graded on (1) communication effectiveness of the presentation; (2) the ability to answer questions, and (3) for groups, the fair division of the presentation amongst group members. 
+
+            </p>
+
+          <h4>Writeup.</h4>
+          
+          <p><i>Length.</i> Your final report should be in <a href="https://www.acm.org/publications/proceedings-template">ACM format</a>. Use the "sigconf" option, i.e. "\usepackage[sigconf]{acmart}" at the top of your LaTeX source. 
+            The report should not exceed 10 pages in this format; however, you may have appendices for additional figures/data.  As a rough guideline, aim for at least: 5 pages total; 0.75 pages background/intro; 0.5 pages related work. 
+            The exact number of pages and length of each section will depend on the nature of your projects. For instance, projects that are improving an existing tool may spend more time talking about the details of the existing tool and the implementation details of an improvement, 
+            than on less-closely-related work.</p>
+          <p> <i>Contents.</i> 
+            Your final writeup should cover the following topics. 
+            <ul>
+              <li> <b>Background. </b> What is the problem domain you are investigating? Why is the problem important?
+              </li>
+              <li> <b>Related work. </b> How does your approach <i>compare</i> and <i>contrast</i> with related approaches?
+                 Focus only on the details necessary to contextualize your approach in the literature.
+              </li>
+
+              <li> <b>Approach. </b> What, precisely, did you build or investigate in the project?
+              </li>
+              <li> <b>Evaluation. </b> What research questions will your evaluation answer? How does your experiment design help answer these questions? What are the results of the experiment, and how do those results inform the research questions?
+              </li>
+              <li> <b> Discussion. </b> Discuss any observations on the experiment which do not fit in the main evaluation,
+                 any goals that were not achieved, potential room for improvement.
+              </li>
+              <li> <b>Division of tasks. </b> If you are working in a group, how did you divide work on the project? Include who wrote different sections of the writeup.
+              </li>
+
+            </ul>
+          </p>
+
+          <p><i>Grading.</i> The final report will be graded on several points, including (not necessarily equally weighted): 
+            <ul>
+              <li>the background provided is sufficient to understand the contribution</li>
+              <li>the related work is critically analyzed in order to contextualize the contribution</li>
+              <li>the overall project approach (as proposed and updated in the check-in) has been accomplished</li>
+              <li>the experimental methodology is sound, the analysis of the experiments has defined takeaways</li>
+              <li>the overall clarity of presentation </li>
+            </ul>
+         </p>
+          
+          </section>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+
+          <h2>Instructions for Discussion Leads</h2>
+          <div class="hbar" id="dls"></div>
+
+          <section class="inner">
+         
+            <p>
+            You will serve as discussion lead for one paper in the class. As a discussion lead, 
+            you do not need to submit a response to the paper being read on Piazza. However, you
+            should read the paper in detail, as you will be the "goto" person for clarification
+            questions during discussion. Read through other students' responses, and identify
+            comTue themes and interesting questions. 
+            </p>
+
+            Prepare the following materials.
+            <ul>
+              <li>A 5-10 minute summary of the key technical contributions of the paper. You
+                may make a slide deck or use the whiteboard. Caroline will by default project
+                the paper for reference during discussion.
+              </li>
+              <li>
+                Identify 3 comTue themes, future work suggestions, or points of contention from 
+                your reading and the other students' responses. Be prepared to briefly explain these to jump-start 
+                discussion. 
+              </li>
+              <li>
+                Identify any clarification questions from your own reading of the paper and other
+                students' reponses. 
+              </li>
+            </ul>
+
+          </section>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <p style="margin-bottom:-8px; color:gray"><small>This course is loosely based off of Koushik Sen's 2016
+              offering of <a href="https://people.eecs.berkeley.edu/~ksen/cs29415fall16.html">CS 294-15</a>.</small></p>
+        </td>
+      </tr>
+
+      <script type="text/javascript">
+
+var m = "Last updated: " + document.lastModified;
+        var p = m.length - 8;
+        document.writeln('<p id="update">');
+        document.write(m.substring(p, 0));
+        document.writeln("</p>");
+      </script>
+</body>
+
+</html>
