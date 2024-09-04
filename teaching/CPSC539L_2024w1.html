@@ -241,7 +241,7 @@
                 Koen Claessen and John Hughes. 2000. <a href="https://doi.org/10.1145/351240.351266">QuickCheck: a lightweight tool for random testing of Haskell programs.</a> In Proceedings of the fifth ACM SIGPLAN international conference on Functional programming (ICFP '00). Association for Computing Machinery, New York, NY, USA, 268–279. 
               </td>
               <td class="discussant">
-                DL: 
+                DL: Jasper 
               </td>
             </tr>
 
@@ -742,7 +742,9 @@ You will receive <b>zero</b> on any written submission (paper response, proposal
 <li>Compare the performance of CodaMOSA to a hinting strategy that pulls example code snippets from the existing project code base (rather than invoking an LLM).</li>
 <li>Front-port the extended test case parsing in CodaMOSA to a more recent version of Pynguin.</li>
 <li>Run <a href="https://www.carolemieux.com/perffuzz-issta2018.pdf">PerfFuzz</a> on a broader benchmark set (i.e. programs not in its evaluation) and evaluate whether the inputs it finds truly represent performance problems.</li>
-<li>Build a dataset of oss-fuzz found bugs and fixes. Evaluate an existing program repair tool on this dataset.</li>
+<li>Relatedly: using PerfFuzz (to find algorithmic complexity issues) or <a href="https://www.carolemieux.com/fuzzfactory_oopsla19.pdf">FuzzFactory-mem</a> (to find excess memory usages), generate inputs for a few programs with different performance behaviors. Select a power/energy measurement mechanism (see <a href="https://firefox-source-docs.mozilla.org/performance/power_profiling_overview.html">here</a>). Evaluate whether "bad performance" runs correlate to "high energy consumption" runs. </li>
+<li>Encode full abstraction problems into a fuzzable form: either properties compatible with a property-based-testing framework or with an API fuzzing framework (<a href="https://github.com/hgarrereyn/GraphFuzz">GraphFuzz</a> or javascript analogue). Evaluate whether the fuzzer can find violations of the encoded full abstraction problems.</li>
+<li>Build a dataset of <a href="https://github.com/google/oss-fuzz?tab=readme-ov-file#trophies">oss-fuzz</a> found <a href="https://bugs.chromium.org/p/oss-fuzz/issues/list?q=Type%3DBug%20label%3Aclusterfuzz%20-status%3ADuplicate%2CWontFix&can=1">bugs</a> and fixes. Evaluate an existing program repair tool on this dataset.</li>
 </ul>
 </p>
 <p> <b>Previous Year's Projects.</b> Here are some projects from previous years:
