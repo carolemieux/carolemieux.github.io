@@ -101,6 +101,13 @@ Topics in Programming Languages: Automated Testing, Bug Detection, and Program A
 <table class="inner">
 <tr>
 <td style = "width:25%" align="center">
+<img src="havoc_plot.jpg" alt="Plots illustrating the havoc effect." width="250">
+</td>
+<td align="justify">
+Parametric generators transform a bytestream input into a structured generator output. This trick allows us to get mutations "for free", enabling feedback-directed fuzzing over structured inputs. However, it leads to what we term the havoc effect: relatively small byte mutations can lead to relatively large structured input mutations. This paper compares plain parametric generators to three approaches to make generator mutations more sensible: Execution Indexing (JQF), BeDivFuzz, and linked crossover in Zeugma. These approaches all reduce the havoc effect, but there are only coverage increases in very particular cases (e.g., when input is not read strictly left-to-right).
+</td></tr>
+<tr>
+<td style = "width:25%" align="center">
 <img src="QuAC_Logo.png" alt="QuAC" width="250">
 </td>
 <td align="justify">
@@ -181,7 +188,7 @@ Performance problems in software can arise unexpectedly when programs are provid
  <a href=http://lcamtuf.coredump.cx/afl/>AFL</a> which targets rare branches to achieve faster program coverage. FairFuzz achieves this by (1) selectively mutating inputs which exercise branches hit by few fuzz-tester generated inputs and (2) using a <i>mutation mask</i> to restrict mutations of these inputs to the parts which can be mutated while still hitting the branch of interest. On our benchmarks, FairFuzz achieves program coverage than AFL or AFLFast, and has a particular advantage on programs with <i>highly nested structure</i>.
 </td></tr>
 </table>
-
+<!---
 <br>
 <section class="inner">
     <h3> Past </h3>
@@ -223,15 +230,19 @@ Design, while the course was still hosted on Coursera.
 I worked on both MOOC offerings, focusing mostly on video lecture development, but also participating in TA
 tasks like replying to students on forums and composing peer-graded projects. The video lectures from
 the Coursera offering were used in CPSC 110, UBC's introductory computer science course, and are available
-for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">here</a>. </td></tr> -->
+for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">here</a>. </td></tr> 
 </table>
-
+--->
 
 <h2>Publications</h2>
 <div class="hbar">
 </div> 
 <div class="inner">
 <ul>
+<li> Ao Li, Madonna Huang, Vasudev Vikram, <b>Caroline Lemieux</b>, Rohan Padhye. The Havoc Paradox in Generator-Based Fuzzing.
+<i>ACM Transactions on Software Engineering and Methodology, 2025.</i> <a href="havoc_tosem25.pdf">pdf</a>.
+</li>
+
 <li> Jifeng Wu, <b>Caroline Lemieux</b>. QuAC: Quick Attribute-Centric Type Inference for Python.
 <i>PACMPL(OOPSLA) 2024.</i> <a href="quac_oopsla_2024.pdf">pdf</a>.
 </li>
