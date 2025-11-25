@@ -89,15 +89,13 @@
                   <li> Test oracles: crashing oracles, differential oracles, automated test-oracle generation</li>
                   <li> Property-based testing </li>
                   <li> Whole test-suite generation </li>
-                  <li> Pattern-based Static Analysis</li>
-                  <li> Fault Localization </li>
                   <li> Dynamic Data Race Detection</li>
                 </ul>
               </li>
               <li><i>Identify</i> contributions and room for improvement in existing research papers;</li>
               <li><i>Debate</i> the positives and negatives of existing research papers; </li>
               <li><i>Categorize</i> and <i>summarize</i> concerns and questions about existing research papers</li>
-              <li><i>Design</i> and <i>conduct</i> the experimental evaluation of a program testing or analysis tool.</li>
+              <li><i>Design</i> and <i>conduct</i> the experimental evaluation of a program testing or analysis tool; <b>or</b> <i>Design</i>, <i>plan</i>, and <i>implement</i> an open-source contribution.</li>
             </ul>
           </section>
         </td>
@@ -142,12 +140,12 @@ If you are doing a research project, it is strongly encouraged be conducted as
             <h3>Grading (Subject to Change)</h3>
             <!-----Attendance at the first day of class (Sep 5) is <i>mandatory</i> and will be counted towards your participation grade. If you are on the waitlist, please attend the first day of class anyway. ----->
             <ul>
-              <li>Paper Responses: 22.5%</li>
-              <li>In-class Participation: 15%</li>
-              <li>Discussion Lead: 7.5%</li>
-              <li>Project Proposal: 12.5% </li>
-              <li>Project Check-in: 2.5%</li>
-              <li>Project Presentation: 10%</li>
+              <li>Paper Responses: 15%</li>
+              <li>In-class Participation: 20%</li>
+              <li>Discussion Lead: 12%</li>
+              <li>Project Proposal: 9% </li>
+              <li>Project Check-in: 2%</li>
+              <li>Project Presentation: 12%</li>
               <li>Project Writeup: 30%</li>
 
             </ul>
@@ -163,38 +161,23 @@ If you are doing a research project, it is strongly encouraged be conducted as
 
         <section class="inner">
 
-          <p><i>Note <b>(July 2025)</b>: this schedule is provided for your information, to give you an idea of what we might cover! We will likely have fewer papers in the 2025W2 semester, and the order of papers might change. </i></p>
-
           <table id="schedule">
 
-            <!----<tr>
-              <td class="date"></td>
-
-              <td class="reading">
-                <i>Imagine UBC Day. <b>No class.</b></i> 
-
-              </td>
-              <td class="discussant">
-              </td>
-
-            </tr>
-            <tr>--->
-              <td class="date"></td>
-
+            <tr>
+              <td class="date">
+		Tue, Jan 6th
+		</td>
               <td class="reading">
                 <i> Course Overview, Introductions </i> <br/> <br/>
 
-		<i> <a href="./resources/20240905_cpsc539l">Slides</a> from class.</i><br/> <br/>
-                <i>Suggested Reading:</i> <a href="./resources/clemieux_dissertation_intro_bg.pdf">Sections 1, 1.1 (not 1.1.1, 1.1.2), 1.2 (not 1.2.1)</a>, Caroline's Dissertation.<br />
-               <br/> 
+		<!---<i> <a href="./resources/20240905_cpsc539l">Slides</a> from class.</i><br/> <br/> --->
+                <i>Suggested Reading (do not write a response):</i> <a href="./resources/clemieux_dissertation_intro_bg.pdf">Sections 1, 1.1 (not 1.1.1, 1.1.2), 1.2 (not 1.2.1)</a>, Caroline's Dissertation.<br />
                <br/> 
                 <i>Optional Reading (do not write a response):</i> <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">How
                   to Read a Paper</a>, Srinivasan Keshav.<br />
                <br/> 
                <br/> 
-                <i>Sign up for course piazza:<TBD>. </i> <br/>
-
-                
+                <i>Sign up for course piazza: TBD. </i> <br/>
 
 
               </td>
@@ -203,17 +186,17 @@ If you are doing a research project, it is strongly encouraged be conducted as
               </td>
 
             </tr>
-
-            <!-----WEEK------->
             <tr>
-              <td class="date"> </td>
+              <td class="date"> Thu, Jan 8th</td>
               <td class="reading">
 
                 <i> Random (a.k.a. Blackbox) Fuzzing </i> <br/> <br/>
 
-                Barton P. Miller, Mengxiao Zhang, and Elisa R. Heymann. 2022. <a href="https://doi.org/10.1109/TSE.2020.3047766">The Relevance of Classic Fuzz Testing: Have We Solved This One?</a>
-                 IEEE Trans. Softw. Eng. 48, 6 (June 2022), 2028–2039. 
-
+		Barton P. Miller, Lars Fredriksen, and Bryan So. 1990.
+<a href="https://doi.org/10.1145/96267.96279">An empirical study of the reliability of UNIX utilities.</a>
+Commun. ACM 33, 12 (Dec. 1990), 32–44.
+                
+<i>Suggested Reading:</i> <a href="./resources/clemieux_dissertation_intro_bg.pdf">Section 2.1</a>, Caroline's Dissertation.<br />
 
                   <br/>
               </td>
@@ -221,70 +204,36 @@ If you are doing a research project, it is strongly encouraged be conducted as
                 DL: Caroline 
 
             </tr>
+            
+
+            <!-----WEEK------->
 
             <tr>
-              <td class="date"> </td>
+              <td class="date"> Tue, Jan 13th</td>
               <td class="reading">
 
-                <i>Coverage-Guided (Greybox) Fuzzing </i> <br/><br/>
-                Andrea Fioraldi, Alessandro Mantovani, Dominik Maier, and Davide Balzarotti. 2023. 
-                <a href="https://doi.org/10.1145/3580596">Dissecting American Fuzzy Lop: A FuzzBench Evaluation.</a> ACM Trans. Softw. Eng. Methodol. 32, 2, Article 52 (March 2023), 26 pages. 
+                <i> Compiler Testing </i> <br/> <br/>
 
-<br/> <br/>
-                <i>Suggested Reading:</i> <a href="./resources/clemieux_dissertation_intro_bg.pdf">Section 2.1</a>, Caroline's Dissertation.<br />
+                Xuejun Yang, Yang Chen, Eric Eide, and John Regehr. 2011. 
+                <a href="https://doi.org/10.1145/1993498.1993532">Finding and understanding bugs in C compilers.</a> 
+                In Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '11). Association for Computing Machinery, New York, NY, USA, 283–294.
+  
                   <!-- -->
 
               </td>
               <td class="discussant">
-                DL: Caroline
-              </td>
-
-            </tr>
-
-            <!-----WEEK------->
-            <tr>
-              <td class="date"> </td>
-              <td class="reading">
-		            <i>Property-Based Testing (aka Generator-Based Fuzzing). </i>
-                <br/>
-                <br/>
-                Koen Claessen and John Hughes. 2000. <a href="https://doi.org/10.1145/351240.351266">QuickCheck: a lightweight tool for random testing of Haskell programs.</a> In Proceedings of the fifth ACM SIGPLAN international conference on Functional programming (ICFP '00). Association for Computing Machinery, New York, NY, USA, 268–279. 
-              </td>
-              <td class="discussant">
                 DL: 
               </td>
-            </tr>
-
-            <tr>
-              <td class="date"> </td>
-              <td class="reading">
-
-
-
-                <i>Combining Coverage-Guided and Generator-Based Fuzzing. </i> <br/><br/>
-
-                Rohan Padhye, Caroline Lemieux, Koushik Sen, Mike Papadakis, and Yves Le Traon. 2019. <a href="https://doi.org/10.1145/3293882.3330576">Semantic fuzzing with zest.</a> In Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2019). Association for Computing Machinery, New York, NY, USA, 329–340. 
-  
-               <br/><br/> <a href="resources/20240919_zest_cpsc539l.pdf">slides</a>
-              </td>
-              <td class="discussant">
-                DL:  
-
-              </td>
 
             </tr>
-
-
-            <!-----WEEK------->
             <tr>
-              <td class="date"></td>
+              <td class="date"> Thu, Jan 15th</td>
               <td class="reading">
+                <i>Compiler Testing in the Era of LLMs</i><br/><br/>
 
-                <i>
-                  Symbolic Execution
-                </i> <br/><br/>
-
-                Cristian Cadar, Daniel Dunbar, and Dawson Engler. 2008. <a href="https://dl.acm.org/doi/10.5555/1855741.1855756">KLEE: unassisted and automatic generation of high-coverage tests for complex systems programs.</a> In Proceedings of the 8th USENIX conference on Operating systems design and implementation (OSDI'08). USENIX Association, USA, 209–224.
+                Chunqiu Steven Xia, Matteo Paltenghi, Jia Le Tian, Michael Pradel, and Lingming Zhang. 2024. 
+                <a href="https://doi.org/10.1145/3597503.3639121">Fuzz4All: Universal Fuzzing with Large Language Models.</a>
+                In Proceedings of the IEEE/ACM 46th International Conference on Software Engineering (ICSE '24). Association for Computing Machinery, New York, NY, USA, Article 126, 1–13. 
 
               </td>
               <td class="discussant">
@@ -292,62 +241,9 @@ If you are doing a research project, it is strongly encouraged be conducted as
               </td>
             </tr>
 
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-
-                <i>Dynamic Symbolic Execution (Concolic Execution)</i> <br/><br/>
-
-                Koushik Sen, George Necula, Liang Gong, and Wontae Choi. 2015. <a href="https://doi.org/10.1145/2786805.2786830">MultiSE: multi-path symbolic execution using value summaries.</a> In Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2015). Association for Computing Machinery, New York, NY, USA, 842–853. 
-              </td>
-              <td class="discussant">
-                DL: 
-              </td>
-            </tr>
-
-            <!-----WEEK------->
-
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-                  <i>
-                    Neural Networks + Fuzzing
-                  </i> <br/> <br/>
-    
-                  D. She, K. Pei, D. Epstein, J. Yang, B. Ray and S. Jana. 2019. 
-                  <a href="https://doi.org/10.1109/SP.2019.00052">NEUZZ: Efficient Fuzzing with Neural Program Smoothing. 
-
-                  </a> 2019 IEEE Symposium on Security and Privacy (SP). San Francisco, CA, USA, pp. 803-817.
-              </td>
-                <td class="discussant">
-                  DL: 
-                </td>
-            </tr>
-
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-                <i>
-                  Neural Networks + Fuzzing Continued
-                </i> <br/> <br/>
-
-                  
-                Maria-Irina Nicolae, Max Eisele, and Andreas Zeller. 2023. 
-                <a href= "https://doi.org/10.1145/3611643.3616308">Revisiting Neural Program Smoothing for Fuzzing.</a> 
-                In Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2023). Association for Computing Machinery, New York, NY, USA, 133–145.
-
-
-              </td>
-              <td class="discussant">
-                DL:
-              </td>
-            </tr>
-
-
-
             <!-----WEEK------->
             <tr>
-              <td class="date"></td>
+              <td class="date">Tue, Jan 20th</td>
        
               <td class="reading">
                 <i>Beating Magic Bytes.</i> <br/> <br/>
@@ -362,30 +258,25 @@ If you are doing a research project, it is strongly encouraged be conducted as
             </tr>
 
             <tr>
-              <td class="date"></td>
+              <td class="date">Thu, Jan 22nd</td>
               <td class="reading">
 
+                <i>Combining Coverage-Guided and Generator-Based Fuzzing. </i> <br/><br/>
 
-
-                <i>Evaluating Randomized Algorithms.</i> <br/><br/>
-
-                Andrea Arcuri and Lionel Briand. 2011. 
-                <a href="https://doi.org/10.1145/1985793.1985795">A practical guide for using statistical tests to assess randomized algorithms in software engineering.</a> 
-                In Proceedings of the 33rd International Conference on Software Engineering (ICSE '11). Association for Computing Machinery, New York, NY, USA, 1–10. 
-		<br/> <br/>
-		<b>Project Proposal Due Oct 11th, 5pm, by email.</b>
-
-
+                Rohan Padhye, Caroline Lemieux, Koushik Sen, Mike Papadakis, and Yves Le Traon. 2019. <a href="https://doi.org/10.1145/3293882.3330576">Semantic fuzzing with zest.</a> In Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2019). Association for Computing Machinery, New York, NY, USA, 329–340. 
+  
               </td>
               <td class="discussant">
-                DL: 
+                DL: Caroline 
+
               </td>
 
             </tr>
 
+
             <!-----WEEK------->
             <tr>
-              <td class="date"></td>
+              <td class="date">Tue, Jan 27th</td>
             
               <td class="reading">
 
@@ -405,7 +296,7 @@ If you are doing a research project, it is strongly encouraged be conducted as
             </tr>
 
             <tr>
-              <td class="date"></td>
+              <td class="date">Thu, Jan 29th</td>
               <td class="reading">
 
 
@@ -425,57 +316,27 @@ If you are doing a research project, it is strongly encouraged be conducted as
 
             <!-----WEEK------->
             <tr>
-              <td class="date"></td>
+              <td class="date">Tue, Feb 3rd</td>
               <td class="reading">
 
+                <i>Project pitches</i> <br/><br/>
 
-                <i>Test Oracle Generation</i><br/><br/>
-
-                Elizabeth Dinella, Gabriel Ryan, Todd Mytkowicz, and Shuvendu K. Lahiri. 2022. 
-                <a href="https://doi.org/10.1145/3510003.3510141">TOGA: a neural method for test oracle generation.</a> 
-                In Proceedings of the 44th International Conference on Software Engineering (ICSE '22). Association for Computing Machinery, New York, NY, USA, 2130–2141. 
-
-
+		Students will do a short "chalk talk" of their project ideas. Rest of the class will be devoted to talking to other students about their projects to form teams, or talking to Caroline to refine the project ideas
               </td>
               <td class="discussant">
-                DL:  
-              </td>
-            </tr>
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-                  <i>Project Work Day</i> 
-              </td>
-              <td class="discussant">
+                DL: All 
               </td>
             </tr>
 
-            <!-----WEEK------->
             <tr>
-              <td class="date"></td>
+              <td class="date">Thu, Feb 5th</td>
               <td class="reading">
 
+                <i>
+                  Symbolic Execution
+                </i> <br/><br/>
 
-                <i>Pattern-Based Static Analysis</i> <br/> <br/>
-
-                David Hovemeyer and William Pugh. 2004. 
-                <a href="https://doi.org/10.1145/1052883.1052895">Finding bugs is easy.</a> SIGPLAN Not. 39, 12 (December 2004), 92–106.
-
-              </td>
-              <td class="discussant">
-                DL: 
-              </td>
-            </tr>
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-
-
-              <i>Type-Annotation Static Analysis</i><br/><br/>
-
-              Martin Kellogg, Vlastimil Dort, Suzanne Millstein, and Michael D. Ernst. 2018. 
-              <a href="https://doi.org/10.1145/3213846.3213849">Lightweight verification of array indexing.</a> 
-              In Proceedings of the 27th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2018). Association for Computing Machinery, New York, NY, USA, 3–14. 
+                Cristian Cadar, Daniel Dunbar, and Dawson Engler. 2008. <a href="https://dl.acm.org/doi/10.5555/1855741.1855756">KLEE: unassisted and automatic generation of high-coverage tests for complex systems programs.</a> In Proceedings of the 8th USENIX conference on Operating systems design and implementation (OSDI'08). USENIX Association, USA, 209–224.
 
               </td>
               <td class="discussant">
@@ -484,8 +345,73 @@ If you are doing a research project, it is strongly encouraged be conducted as
             </tr>
 
             <!-----WEEK------->
+
             <tr>
-              <td class="date"></td>
+              <td class="date">Tue, Feb 10th</td>
+              <td class="reading">
+                  <i>
+                    Inferring Test Oracles from Documentation 
+                  </i> <br/> <br/>
+
+Alberto Goffi, Alessandra Gorla, Michael D. Ernst, and Mauro Pezzè. 2016.
+<a href="https://doi.org/10.1145/2931037.2931061">Automatic generation of oracles for exceptional behaviors.</a>
+In Proceedings of the 25th International Symposium on Software Testing and Analysis (ISSTA 2016). Association for Computing Machinery, New York, NY, USA, 213–224.
+    
+              </td>
+                <td class="discussant">
+                  DL: 
+                </td>
+            </tr>
+
+            <tr>
+              <td class="date">Thu, Feb 12th</td>
+              <td class="reading">
+                <i>
+                  Generating Test Oracles using LLMs
+                </i> <br/> <br/>
+
+Soneya Binta Hossain and Matthew B. Dwyer. 2025.
+<a href="https://doi.org/10.1109/ICSE55347.2025.00098">TOGLL: Correct and Strong Test Oracle Generation with LLMs.</a>
+In Proceedings of the IEEE/ACM 47th International Conference on Software Engineering (ICSE '25). IEEE Press, 1475–1487.                  
+
+		<b>Project Proposal Due Feb 15th, 11:59PM, by email.</b>
+
+              </td>
+              <td class="discussant">
+                DL:
+              </td>
+            </tr>
+
+
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue, Feb 17th</td>
+              <td class="reading">
+	      <i> Reading Week; no class, no reading. </i>
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="date">Thu, Feb 19th</td>
+              <td class="reading">
+	      <i> Reading Week; no class, no reading. </i>
+
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue, Feb 24th</td>
 
               <td class="reading">
 
@@ -500,87 +426,112 @@ If you are doing a research project, it is strongly encouraged be conducted as
                 DL: 
               </td>
             </tr>
+            
             <tr>
-              <td class="date"></td>
+              <td class="date"> Thu, Feb 26th</td>
               <td class="reading">
-                <i> Fault Localization. </i>
-              <br/><br/>
-                James A. Jones, Mary Jean Harrold, and John Stasko. 2002. <a href="https://dl.acm.org/doi/10.1145/581339.581397">Visualization of test information to assist fault localization.</a> 
-                <a href="https://doi.org/10.1145/581339.581397"></a>In Proceedings of the 24th International Conference on Software Engineering (ICSE '02)</a>. Association for Computing Machinery, New York, NY, USA, 467–477. 
 
-		<br/> <br/>
-		<b>Project Check-in Due Nov 8th, 5pm, by email.</b>
+
+                <i>Pattern-Based Static Analysis</i> <br/> <br/>
+
+                David Hovemeyer and William Pugh. 2004. 
+                <a href="https://doi.org/10.1145/1052883.1052895">Finding bugs is easy.</a> SIGPLAN Not. 39, 12 (December 2004), 92–106.
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+            <tr>
+
+
+	    <!-----WEEK------>
+             <tr>
+              <td class="date">Tue, Mar 3rd</td>
+              <td class="reading">
+                  <i>Synthesizing Program Input Grammars (Spec Mining)</i><br/> <br/>
+Osbert Bastani, Rahul Sharma, Alex Aiken, and Percy Liang. 2017.
+<a href="https://doi.org/10.1145/3062341.3062349">Synthesizing program input grammars.</a>
+In Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2017). Association for Computing Machinery, New York, NY, USA, 95–110.
+
+              </td>
+              <td class="discussant">
+                DL:  
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu, Mar 5th</td>
+              <td class="reading">
+                  <i>So.. Do They Actually Mine Grammars?</i><br/> <br/>
+
+Bachir Bendrissou, Rahul Gopinath, and Andreas Zeller. 2022.
+<a href="https://doi.org/10.1145/3519939.3523716">"Synthesizing input grammars": a replication study.</a>
+In Proceedings of the 43rd ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI 2022). Association for Computing Machinery, New York, NY, USA, 260–268. 
+              </td>
+              <td class="discussant">
+              </td>
+            </tr>
+	    
+             <!-----WEEK------>
+             <tr>
+              <td class="date">Tue, Mar 10th</td>
+              <td class="reading">
+                  <i>Code-Comment Inconsistency Detection</i> <br/> <br/> 
+
+Lin Tan, Ding Yuan, Gopal Krishna, and Yuanyuan Zhou. 2007.
+<a href="https://doi.org/10.1145/1294261.1294276">/icomment: bugs or bad comments?/</a>
+In Proceedings of twenty-first ACM SIGOPS symposium on Operating systems principles (SOSP '07). Association for Computing Machinery, New York, NY, USA, 145–158.
+
+              </td>
+              <td class="discussant">
+                DL:  
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu, Mar 12th</td>
+              <td class="reading">
+                  <i>Inconsistency Detection and Rectification with LLMs</i> <br/> <br/> 
+
+Rong et al. 2025
+Guoping Rong, Yongda Yu, Song Liu, Xin Tan, Tianyi Zhang, Haifeng Shen, and Jidong Hu. 2025.
+<a href="https://doi.org/10.1109/ICSE55347.2025.00035">Code Comment Inconsistency Detection and Rectification Using a Large Language Model.</a>
+In Proceedings of the IEEE/ACM 47th International Conference on Software Engineering (ICSE '25). IEEE Press, 1832–1843.
+
               </td>
               <td class="discussant">
 		DL:
               </td>
             </tr>
 
+	    <!-----WEEK------>
+             <tr>
+              <td class="date">Tue, Mar 17th</td>
+              <td class="reading">
+		<b>Project Check-in Due Mar 16th, 11:59PM, by email.</b>
 
+                <i>Project Updates</i> <br/><br/>
+
+		Students will do a short "chalk talk" of their project progress so far. Rest of the class will be devoted to talking to team members, talking to other students about what directiosn to go into, or talking to Caroline to refine the next steps of the project.
+
+              </td>
+              <td class="discussant">
+                DL: All 
+              </td> 
+            </tr>
+            <tr>
+              <td class="date">Thu, Mar 19th</td>
+              <td class="reading">
+                  <i>Project Work Day</i>. <br/> <br/>
+
+		  No formal class. Open OH in the classroom.  
+              </td>
+              <td class="discussant">
+              </td>
+            </tr>
             <!-----WEEK------->
-            <tr>
-              <td class="date"></td>
+              <td class="date">Tue, Mar 24th</td>
               <td class="reading">
 
-                <i>Midterm Break. <b>No Class</b>.</i>
-
-
-              </td>
-              <td class="discussant">
-                 
-              </td>
-            </tr>
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-
-  
-                  <i>Project Work Day</i>
-              </td>
-              <td class="discussant">
-              </td>
-            </tr>
-
-            <!-----WEEK------->
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-
-
-                <i> Compiler Testing </i> <br/> <br/>
-
-                Xuejun Yang, Yang Chen, Eric Eide, and John Regehr. 2011. 
-                <a href="https://doi.org/10.1145/1993498.1993532">Finding and understanding bugs in C compilers.</a> 
-                In Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '11). Association for Computing Machinery, New York, NY, USA, 283–294.
-  
-
-              </td>
-              <td class="discussant">
-                DL: 
-              </td>
-            </tr>
-            <tr>
-              <td class="date"></td>
-              <td class="reading">
-
-
-                <i>Compiler Testing in the Era of LLMs</i><br/><br/>
-
-                Chunqiu Steven Xia, Matteo Paltenghi, Jia Le Tian, Michael Pradel, and Lingming Zhang. 2024. 
-                <a href="https://doi.org/10.1145/3597503.3639121">Fuzz4All: Universal Fuzzing with Large Language Models.</a>
-                In Proceedings of the IEEE/ACM 46th International Conference on Software Engineering (ICSE '24). Association for Computing Machinery, New York, NY, USA, Article 126, 1–13. 
-
-              </td>
-              <td class="discussant">
-                DL: 
-              </td>
-            </tr>
-
-            <!-----WEEK------->
-            <tr>
-              <td class="date"></td>
-   
-              <td class="reading">
 
                 <i>Bug Detection in Concurrent Programs</i><br/><br/>
 
@@ -594,22 +545,50 @@ If you are doing a research project, it is strongly encouraged be conducted as
               </td>
             </tr>
             <tr>
-              <td class="date"></td>
+              <td class="date">Thu, Mar 26th</td>
               <td class="reading">
 
+                <i>Scaling Concurrency Bug Detection</i><br/><br/>
 
-                <i>Testing Programs that Interact with Network</i><br/><br/>
-Sergej Schumilo, Cornelius Aschermann, Andrea Jemmett, Ali Abbasi, and Thorsten Holz. 2022. <a href="https://doi.org/10.1145/3492321.3519591">Nyx-net: network fuzzing with incremental snapshots</a>. In Proceedings of the Seventeenth European Conference on Computer Systems (EuroSys '22). Association for Computing Machinery, New York, NY, USA, 166–180. 
+Guangpu Li, Shan Lu, Madanlal Musuvathi, Suman Nath, and Rohan Padhye. 2019.
+<a href="https://doi.org/10.1145/3341301.3359638">Efficient scalable thread-safety-violation detection: finding thousands of concurrency bugs during testing.</a>
+In Proceedings of the 27th ACM Symposium on Operating Systems Principles (SOSP '19). Association for Computing Machinery, New York, NY, USA, 162–180.
+
               </td>
               <td class="discussant">
-                DL:
+                DL: 
+              </td>
+            </tr>
+
+            <!-----WEEK------->
+            <tr>
+              <td class="date">Tue, Mar 31st</td>
+              <td class="reading">
+
+                <i>Topic TBD Based on Class Interest</i><br/><br/>
+
+
+              </td>
+              <td class="discussant">
+                DL: 
+              </td>
+            </tr>
+            <tr>
+              <td class="date">Thu, Apr 2nd</td>
+              <td class="reading">
+
+                <i>Topic TBD Based on Class Interest</i><br/><br/>
+
+              </td>
+              <td class="discussant">
+                DL: 
               </td>
             </tr>
 
 
             <!-----WEEK------->
             <tr>
-              <td class="date"></td>
+              <td class="date">Tue, Apr 7th</td>
               <td class="reading">
                 <i>Project presentations </i>
 
@@ -619,7 +598,7 @@ Sergej Schumilo, Cornelius Aschermann, Andrea Jemmett, Ali Abbasi, and Thorsten 
               </td>
             </tr>
             <tr>
-              <td class="date"></td>
+              <td class="date">Thu, Apr 9th</td>
               <td class="reading">
                 <i>Project presentations </i>
 		
@@ -787,16 +766,16 @@ You will receive <b>zero</b> on any written submission (paper response, proposal
 	<p>At the end of term, evaluate your project against these success metrics. If any unexpected issues made you unable to meet these metrics. If you have met all your success metrics, and are confident the contribution improves the state of the project (multiple team members can help with this!), the contribution can be submitted to maintainers before the end of the course.</p>
 
         
-       <!--- <h3>Deliverables</h3>
+        <h3>Deliverables</h3>
           <p>
             <b>Proposal.</b>
-            Your project proposal should roughly follow this structure, adapting to the nature of your project (new tool vs. replication vs. benchmark creation):
+            Your project proposal should roughly follow this structure, adapting to the nature of your project (new tool vs. replication vs. benchmark creation vs. implementation):
             <ul>
               <li> <b>Background. </b> What is the problem domain you are investigating? Why is the problem important?
               </li>
               <li> <b>Intended approach. </b> What, precisely, are you aiming to build or investigate in the project? What precise problem will you be solving?
               </li>
-              <li> <b>Evaluation plan. </b>  If you are planning on running an experiment, how many benchmarks will you evaluate on? How long will you run your tool(s)? 
+              <li> <b>Evaluation plan. </b>  If you are planning on running an experiment, how many benchmarks will you evaluate on? How long will you run your tool(s)? If you are implementing a contribution, how will you evaluate that your contribution works correctly
               </li>
               <li> <b>Division of tasks. </b> If you are working in a group, what is your  plan to divide work on the project?
               </li> 
@@ -820,7 +799,7 @@ You will receive <b>zero</b> on any written submission (paper response, proposal
             <ul>
             <li> <b>Background + Motivation </b> Why is this project important?
             </li>
-            <li> <b>Key details of accomplished approach. </b> If you built a tool/algorithm: what are the key contributions of the tool/algorithm you built? If you are conducting an empirical investigation/case study: what methodology did you adopt? 
+            <li> <b>Key details of accomplished approach. </b> If you built a tool/algorithm: what are the key contributions of the tool/algorithm you built? If you are conducting an empirical investigation/case study: what methodology did you adopt? If you made an open-source contribution: what does your contribution enable which was previously impossible?
             </li>
             <li> <b>Evaluation Results + Conclusion. </b> How did you evaluate your approach? What were the results? What are the high-level takeaways of these results?
             </li>
@@ -839,16 +818,16 @@ You will receive <b>zero</b> on any written submission (paper response, proposal
           <p> <i>Contents.</i> 
             Your final writeup should cover the following topics. 
             <ul>
-              <li> <b>Background. </b> What is the problem domain you are investigating? Why is the problem important?
+              <li> <b>Background. </b> What is the problem domain you are investigating? Or, what is the problem you intend to help with your implementation? Why is the problem important?
               </li>
               <li> <b>Related work. </b> How does your approach <i>compare</i> and <i>contrast</i> with related approaches?
-                 Focus only on the details necessary to contextualize your approach in the literature.
+                 Focus only on the details necessary to contextualize your approach in the literature. If building an open-source contribution, is your contribution inspired by any research projects, or any other open-source contributions/project? 
               </li>
 
               <li> <b>Approach. </b> What, precisely, did you build or investigate in the project?
               </li>
               <li> <b>Evaluation. </b> What research questions will your evaluation answer? How does your experiment design help answer these questions? What are the results of the experiment, and how do those results inform the research questions?
-              </li>
+              If building an open-source contribution, how have you ensured you have accomplished what you set out to do?</li>
               <li> <b> Discussion. </b> Discuss any observations on the experiment which do not fit in the main evaluation,
                  any goals that were not achieved, potential room for improvement.
               </li>
@@ -867,7 +846,6 @@ You will receive <b>zero</b> on any written submission (paper response, proposal
               <li>the overall clarity of presentation </li>
             </ul>
          </p>
-          --->
           </section>
         </td>
       </tr>
@@ -881,7 +859,7 @@ You will receive <b>zero</b> on any written submission (paper response, proposal
           <section class="inner">
          
             <p>
-            You will serve as discussion lead for one paper in the class. As a discussion lead, 
+            You will serve as discussion lead for two papers in the class. As a discussion lead, 
             you do not need to submit a response to the paper being read on Piazza. However, you
             should read the paper in detail, as you will be the "goto" person for clarification
             questions during discussion. Read through other students' responses, and identify
