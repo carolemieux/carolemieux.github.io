@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="../main.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main">
+    <title>CPSC 528L: Software Engineering Tools in the Era of LLMs</title> 
+
+    <table id="main">
+
+      <tr>
+        <td style="padding-bottom: 20px">
+    <h1>CPSC 528L: Software Engineering Tools in the Era of LLMs</h1> 
+
+          <p style="margin-bottom:-8px; color:gray"><small>CPSC 528L, Winter Term 2 2026 (Jan-Apr 2027), Instructor: Caroline Lemieux
+              (clemieux@cs.ubc.ca)</small></p>
+    <!----      <p style="margin-bottom:-8px;color:gray"><small>Tu/Th 11:00AM-12:30PM, SWNG 210 </small></p>
+          <p style="margin-bottom:-8px;color:gray"><small>Sign up for course <a href="https://piazza.com/ubc.ca/winterterm22026/cpsc539l2025w2">Piazza</a></small></p>
+          <p style="margin-bottom:-8px;color:gray"><small>Office hours by appointment, email Caroline (clemieux@cs.ubc.ca)</small></p>
+          --->
+          </br>
+        </td>
+      </tr>
+
+<tr>
+<td>
+  <p style="text-align:center; font-weight: bold; font-size:larger">Quick Links</p>
+  <p style="text-align:center">
+  <a href="#desc">Course Description</a> &#8226;<a href="#format">Format</a> &#8226; <a href="#schedule-sec">Schedule</a> &#8226; <a href="#plagiarism">Academic Honesty</a> 
+</p>
+</td>
+</tr>
+
+      <tr>
+        <td>
+
+          <h2 id ="desc">Course description <small><small><sup><a  href="#">^</a></sup></small></small></h2> 
+          <div class="hbar"></div>
+
+          <section class="inner">
+            <p><i>Software engineering tools</i> exist to help developers write correct, performant, and secure software.
+            When we think of concrete tools used in software engineering, perhaps the most familiar is the IDE. IDEs encapsulate a variety of different software engineering tools: code completion tools, debuggers, static 
+            analyses that detect errors before running, and many more.</p>  
+            
+
+           <p>Software engineering tooling <i>research</i> aims to push the bounds on which software development tasks can be
+           automated, and to which extent. And there are many different tasks to tackle...
+           <ul> 
+           <li>Code completion tools aim to predict the next character, word, or line, a developer intends to write. </li>
+           <li> <i> Automated test generation </i> aims to, well, automatically test programs: 
+           be it to find inputs that expose bugs a given program, or to generate whole test suites for a given program. </li>
+           <li>Vulnerability detection
+           tools  work by either by generating inputs showing security flaws, or labelling 
+           sections of code as particularly susceptible to exploitation.</li> 
+           <li>Profilers and debuggers analyze code as it runs, to give developers
+           richer information about code execution, which will help them identify and fix bugs.</li> 
+           <li>Program repair tools aim to, given 
+           some issue report or failing tests, report a fixed programs. </li> 
+           <li>Code-documentation inconsistency detection tools aim to
+           point out to developers where their code and documentation differs, and sometimes suggest how to fix it.  </li>
+           <li>Specification mining work aims to analyze code, or
+           code executions, to extract higher-level properties (specifications) about the program being analyzed: developers
+           can then analyze these to see whether they match their expectations.</li> 
+           <li>Program synthesis goes the other way: given specifications 
+           (either in a formal language, in the form of test cases, or natural language) it aims to generate code that matches these specification. </li>
+          </ul>
+          </p>
+
+          <p>This list is not exhaustive. The point is: software engineering tooling research is a <i>broad</i> field. Innovations have come from
+          various different researchers in many different fields, including Software Engineering, Programming Languages, Security, Systems,
+          and Machine Learning.</p> 
+          
+          <p>With the advent of Large Language Models, which have improved code completion by leaps
+          and bounds, we are seeing more software engineering tool work pop up in machine learning venues. In addition,
+          the flexibility of LLMs at generating code gives Software Engineering researchers an incredibly powerful building
+          block to use in software engineering tools; a huge percentage of work in Software Engineering is now pushing
+          the bounds of where and how LLMs can improve the performance of software engineering tooling.</p>
+
+         <p>With this excitement comes a flood of research. With this flood of research comes many questions: What are the limits
+         of software engineering tools? How do we evaluate
+         the significance of work in which prompt engineering is a major part of the research? What is the relevance of pre-LLM work, if it performs worse on end metrics? Where does the potential for impact lie?  </p>
+
+         <p>This course aims to answer those questions, and more. The course will introduce students to Software Engineering 
+         Tooling research. We will cover the theoretical limits that constrain the performance of software engineering tools.
+         We will cover research norms in software engineering: how significance and impact are evaluated by the field.  We will read papers that established research in, greatly improved the performance of, or enlivened various software engineering tools.
+         Each paper-reading week, we will pair one such classic paper with a recent LLM-driven work in its domain.  </p>
+
+         <p>This course is suitable for students unfamiliar with software engineering research. It is a complement to CPSC 507,
+         which focuses on research methods in software engineering, especially human factors. </p>
+
+
+            <h4>Course-level learning goals (Subject to Change)</h4>
+
+            After the course, participants should be able to:
+            <ul>
+              <li> <i>Explain</i> the theoretical limits (Rice's theorem, SAT being NP-complete) that constrain the performance of software engineering tools </li>
+              <li> <i>Describe</i> the problems solved by the following techniques, <i>recognize</i> the scenarios in which each technique can be used, and <i>analyze</i> the pros and cons of each technique, for the following techniques:
+                <ul>
+                  <li> (See Weekly Topics Below)</li>
+                </ul>
+              </li>
+              <li><i>Identify</i> contributions and room for improvement in existing research papers;</li>
+              <li><i>Debate</i> the positives and negatives of existing research papers; </li>
+              <li><i>Categorize</i> and <i>summarize</i> concerns and questions about existing research papers</li>
+              <li><i>Design</i> and <i>conduct</i> the experimental evaluation of a program testing or analysis tool; </li>
+            </ul>
+
+          </section>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h2 id="format">Format <small><small><sup><a  href="#">^</a></sup></small></small></h2>
+          <div class="hbar"></div>
+
+          <section class="inner">
+            <p>This is a seminar-style class, which is primarily driven by in-class discussion of a research paper. Each
+              student is expected to submit a <a href="#responses">response</a> to the paper being discussed in the class
+               the day before the class in which it is discussed. Each student will also serve as discussion lead for 1-2
+              papers; the discussion lead will read through other students' responses and
+              prepare questions to start the discussion. Around <b> half</b> your course mark comes from
+              participating in discussions and submitting paper responses.</p>
+
+
+            <p>
+              The other half of your course mark will come from an open-ended course project. The project is meant to be a small investigation into LLMs for Software Engineering tooling. It is not expected to be a full (publishable) research project. Instead, the goal is to gain a deeper---i.e.,---understanding of the performance of SE tools on a task that interests you. A few directions of inquiry include:</p>
+
+<ul>
+<li>Comparing SE tools (either LLM or non-LLM) to the performance of frontier models without specific prompting.</li>
+<li>Qualitatively analyzing the results of an LLM-based SE tool which was only quantitatively analyzed.</li>
+<li>Running an SE tool in a setting beyond the one it was originally evaluated on (e.g., larger/different code bases, new data).</li>
+<li>Analyzing performance differences of an LLM-based SE tool when run with different LLMs.</li>
+<li>Comparing an LLM-based SE tool to a non-LLM tool it was not previously compared with.</li>
+<li> ... you are welcome to discuss with Caroline any ideas you have that are not listed here.</li> 
+</ul>
+
+I will populate the list below with interesting sources of benchmarks as semester gets closer. 
+
+<ul>
+<li><a href="">RubberDuckBench</a>: A small set of code understanding questions, with thorough rubrics.</li>
+<li><a href="https://github.com/rjust/defects4j">Defects4J</a>: A classic dataset of bugs and bug fixes in Java (likely in LLMs' training Set)</li>
+<li><a href="https://github.com/soarsmu/bugsinpy">BugsInPy</a>: A Defects4J-inspired dataset of bugs and bug fixes in Python (likely in LLMs' training Set)</li>
+</ul>
+
+<p>The schedule will also be updated with precise papers you can use as inspiration.</p>
+
+<p>
+It is <b>strongly encouraged</b> to conduct the project in a team of 2-4 students. This usually results in more interesting projects, and less work for each individual student.
+</p>
+
+<p>The project deliverables include an initial proposal, a project check-in, an in-class presentation of the work, and a
+              final report summarizing what has been achieved.
+            </p>
+
+
+
+            <h3>Grading (Subject to Change)</h3>
+            <!-----Attendance at the first day of class (Sep 5) is <i>mandatory</i> and will be counted towards your participation grade. If you are on the waitlist, please attend the first day of class anyway. ----->
+            <ul>
+              <li>Paper Responses: 10%</li>
+              <li>In-class Participation: 20%</li>
+              <li>Discussion Lead: 15%</li>
+              <li>Project Proposal: 8% </li>
+              <li>Project Check-in: 2%</li>
+              <li>Project Presentation: 20%</li>
+              <li>Project Writeup: 25%</li>
+
+            </ul>
+
+          </section>
+      </td>
+      </tr>
+
+    <tr>
+      <td>
+        <h2 id="schedule-sec">Schedule (Subject to Change)<small><small><sup><a  href="#">^</a></sup></small></small></h2>
+        <div class="hbar"></div>
+
+        <section class="inner">
+
+          <table id="schedule">
+
+<thead>
+<tr>
+<th>Week</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 4</td>
+<td>Introduction, Theoretical Limits of Software Engineering Tooling  (Lecture)</td>
+</tr>
+<tr>
+<td>Jan 11</td>
+<td>A Case Study in Scale vs. Provability: Fuzzing vs Symbolic Execution  (Lecture)</td>
+</tr>
+<tr>
+<td>Jan 18</td>
+<td>Code Completion (Papers)</td>
+</tr>
+<tr>
+<td>Jan 25</td>
+<td>Automated Program Repair (Papers)</td>
+</tr>
+<tr>
+<td>Feb 1</td>
+<td>Basics of Program Analysis (Lecture)</td>
+</tr>
+<tr>
+<td>Feb 8</td>
+<td>Program Synthesis (i.e., Code Generation) (Papers)</td>
+</tr>
+<tr>
+<td>Feb 15</td>
+<td>No Class. Reading Week.</td>
+</tr>
+<tr>
+<td>Feb 22</td>
+<td>Student Project Pitches</td>
+</tr>
+<tr>
+<td>Mar 1</td>
+<td>Unit Test Generation (Papers)</td>
+</tr>
+<tr>
+<td>Mar 8</td>
+<td>Compiler Testing (Papers)</td>
+</tr>
+<tr>
+<td>Mar 15</td>
+<td>Specification Mining (Papers)</td>
+</tr>
+<tr>
+<td>Mar 22</td>
+<td>Code-Documentation Inconsistency Detection (Papers)</td>
+</tr>
+<tr>
+<td>Mar 29</td>
+<td>Vulnerability Detection (Papers)</td>
+</tr>
+<tr>
+<td>Apr 5</td>
+<td>Project Presentations</td>
+</tr>
+<tr>
+<td>Apr 12</td>
+<td>No Class</td>
+</tr>
+</tbody>
+</table>
+
+
+
+        </section>
+      </td>
+    </tr>
+
+      <tr>
+        <td>
+
+          <h2 id="plagiarism">Academic Honesty <small><small><sup><a  href="#">^</a></sup></small></small></h2>
+          <div class="hbar" id="assign"></div>
+
+          <section class="inner">
+         
+            <p> 
+You will receive <b>zero</b> on any written submission (paper response, proposal, final write-up) that is found to have plagiarised materials. This includes even a single plagiarized sentence. This includes plagiarism from other students, as well as from other research papers.  Refer to <a href="academic_honesty.html">this page</a> for more details on the definition of plagiarism, and tips on how to avoid it.</p>
+
+          <p>
+          There is zero-tolerance for the use of GenAI to generate <b>written materials</b> for the course, including paper responses, project proposals, etc. I.e., writing submitted for the course should be generated by a human. I will always favour short, clear, human-written text, over long amounts of GenAI-written text. You are free to use GenAI for coding tasks in your course project; however, you will need to be able to assess whether the coding task was implemented correctly. Using GenAI to spellcheck work is ok. 
+          </p>
+
+          <p>Why no GenAI for the paper responses? It is because the goal of writing paper responses is not to provide us with yet-another summary of a paper. It is instead to provide (a) the response-writer with the opportunity to critically examine what parts of the paper they have understood; and (b) the response-readers (discussion leads and instructor) with an understanding of which parts of the paper need extra elucidation/joint discussion. If the paper responses are generated by passing the paper to GenAI, neither of these goals will be accomplished.</p>
+
+          </section>
+        </td>
+      </tr>
+
+      <script type="text/javascript">
+
+var m = "Last updated: " + document.lastModified;
+        var p = m.length - 8;
+        document.writeln('<p id="update">');
+        document.write(m.substring(p, 0));
+        document.writeln("</p>");
+      </script>
+</body>
+
+</html>
