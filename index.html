@@ -23,7 +23,7 @@
 
 Assistant Professor
 <br />
-<a href="https://www.chairs-chaires.gc.ca/media-medias/lists-listes/2025/fall-autumne-eng.aspx">Canada Research Chair</a> in Software Testing and Analysis (Tier 2)
+<a href="https://www.chairs-chaires.gc.ca/media-medias/lists-listes/2025/fall-autumne-eng.aspx">Canada Research Chair</a> in Software Testing and Analysis
 <br />
 <a href="https://www.ubc.ca/"> University of British Columbia</a><br />
 Department of <a href="https://www.cs.ubc.ca/">Computer Science</a>
@@ -32,7 +32,9 @@ Department of <a href="https://www.cs.ubc.ca/">Computer Science</a>
 
 Email:  clemieux<span style="display:none">bots-gotta-get-smarter-than-this</span><span>@</span><span style="display:none">its-really-not-that-hard</span><span>cs.ubc.ca</span>
 <br />
-Twitter: <a href="https://twitter.com/cestlemieux">@cestlemieux</a>
+Bluesky: <a href="https://bsky.app/profile/cestlemieux.bsky.social">@cestlemieux</a>
+<br />
+Mastodon: <a href="https://mastodon.acm.org/@cestlemieux">@cestlemieux</a>
 <br />
 Github: <a href="https://github.com/carolemieux">carolemieux</a>
 <br />
@@ -104,6 +106,14 @@ Topics in Programming Languages: Automated Testing, Bug Detection, and Program A
 </section> -->
 <table class="inner">
 <tr>
+<td style = "width:25%" align="center">
+<img src="cicd_plot.jpg" alt="Bar chart showing AFL with more bugs reached/triggered than AFL++ or libfuzzer." width="250">
+</td>
+<td align="justify">
+Are directed fuzzers are worth their cost (in extra project build time) in a CI/CD setting? We find that, when we assume that long-running fuzzing runs have previously occurred to create a fuzz corpus, there is not much difference between undirected and directed fuzzers. Indeed, AFL is the fastest at reaching and triggering the injected bugs. Why? Most bugs are reached/triggered by the fuzz corpus generated on the previous version of the code. A <i>few</i> bugs are only reached/triggered by fuzzing.  For practitioners looking for the power of fuzzing, but with increased determinism and reduced energy usages, the "unit test" approach is well-supported by our study. You can find the codebase with our changes to Magma for CI/CD setting <a href="https://github.com/carolemieux/cicd-magma">here</a>.
+</td></tr>
+<tr>
+
 <td style = "width:25%" align="center">
 <img src="havoc_plot.jpg" alt="Plots illustrating the havoc effect." width="250">
 </td>
@@ -225,6 +235,7 @@ in linear temporal logic (LTL). Quarry uses Daikon for data predicate
 inference and Texada for inference of temporal invariants. 
 </td>
 </tr>
+
 <!-- <td style = "width:25%">
 <img src="coursera-pic.jpg" alt="Introduction to Systematic Program Design" width="250">
 </td>
@@ -242,20 +253,26 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 <div class="hbar">
 </div> 
 <div class="inner">
+Students I advised are <u>underlined</u>.
+
 <ul>
-<li> Ao Li, Madonna Huang, Vasudev Vikram, <b>Caroline Lemieux</b>, Rohan Padhye. The Havoc Paradox in Generator-Based Fuzzing.
+<li> <u>Madonna Huang</u>, <b>Caroline Lemieux</b>. Directed or Undirected: Investigating Fuzzing Strategies in a CI/CD Setup.
+<i>ACM Transactions on Software Engineering and Methodology, 2026.</i> <a href="cicd_tosem26.pdf">pdf</a>.
+</li>
+
+<li> Ao Li, <u>Madonna Huang</u>, Vasudev Vikram, <b>Caroline Lemieux</b>, Rohan Padhye. The Havoc Paradox in Generator-Based Fuzzing.
 <i>ACM Transactions on Software Engineering and Methodology, 2025.</i> <a href="havoc_tosem25.pdf">pdf</a>.
 </li>
 
-<li> Jifeng Wu, <b>Caroline Lemieux</b>. QuAC: Quick Attribute-Centric Type Inference for Python.
+<li> <u>Jifeng Wu</u>, <b>Caroline Lemieux</b>. QuAC: Quick Attribute-Centric Type Inference for Python.
 <i>PACMPL(OOPSLA) 2024.</i> <a href="quac_oopsla_2024.pdf">pdf</a>.
 </li>
 
-<li> Ao Li, Madonna Huang, <b>Caroline Lemieux</b>, Rohan Padhye. The Havoc Paradox in Generator-Based Fuzzing (Registered Report).
+<li> Ao Li, <u>Madonna Huang</u>, <b>Caroline Lemieux</b>, Rohan Padhye. The Havoc Paradox in Generator-Based Fuzzing (Registered Report).
 <i>In Proceedings of FUZZING'24.</i> <a href="havoc_fuzzing24.pdf">pdf</a>.
 </li>
 
-<li> Madonna Huang, <b>Caroline Lemieux</b>. Directed or Undirected: Investigating Fuzzing Strategies in a CI/CD Setup (Registered Report).
+<li> <u>Madonna Huang</u>, <b>Caroline Lemieux</b>. Directed or Undirected: Investigating Fuzzing Strategies in a CI/CD Setup (Registered Report).
 <i>In Proceedings of FUZZING'24.</i> <a href="cicd_fuzzing24.pdf">pdf</a>.
 </li>
 
@@ -263,13 +280,13 @@ for viewing <a href= "https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">
 <i>In Proceedings of the 45th International Conference on Software Engineering, ICSE 2023.</i> <a href="codamosa_icse23.pdf">pdf</a>, <a href="20230517_Codamosa_ICSE23.pdf">slides</a>, <a href="https://youtu.be/DOuKHfNtT7M?si=39paZhQa8W9nDcy9">video</a>.
 </li>
 
-	<li>Neil Kulkarni*, <b>Caroline Lemieux*</b>, and Koushik Sen. Learning Highly Recursive Input Grammars. In <i>Proceedings of the 36th IEEE/ACM International Conference on Automated Software Engineering, ASE 2021</i>.  <a href="arvada_ase21.pdf">pdf</a>, extended tech report on <a href="https://arxiv.org/abs/2108.13340">ArXiV</a>. <br/><small>(*equal contribution)</small></li>
+	<li><u>Neil Kulkarni</u>*, <b>Caroline Lemieux*</b>, and Koushik Sen. Learning Highly Recursive Input Grammars. In <i>Proceedings of the 36th IEEE/ACM International Conference on Automated Software Engineering, ASE 2021</i>.  <a href="arvada_ase21.pdf">pdf</a>, extended tech report on <a href="https://arxiv.org/abs/2108.13340">ArXiV</a>. <br/><small>(*equal contribution)</small></li>
 
 <li> Rohan Bavishi, <b>Caroline Lemieux</b>, Koushik Sen, Ion Stoica. Gauss: Program Synthesis by Reasoning over Graphs. <i> OOPSLA 2021</i>.
 <a href="gauss_oopsla_2021.pdf">pdf</a>.
 </li>
 
-<li> Sameer Reddy, <b>Caroline Lemieux</b>, Rohan Padhye, Koushik Sen. Quickly Generating Diverse Valid Test Inputs with Reinforcement Learning.
+<li> <u>Sameer Reddy</u>, <b>Caroline Lemieux</b>, Rohan Padhye, Koushik Sen. Quickly Generating Diverse Valid Test Inputs with Reinforcement Learning.
 <i>In Proceedings of the 42nd International Conference on Software Engineering, ICSE 2020.</i> <a href="rlcheck_icse20.pdf">pdf</a>, <a href="RLCheck_ICSE2020_slides.pdf">slides</a>, <a href="https://www.youtube.com/watch?v=HDFZVpWo4gE">video</a>.
 </li>
 
@@ -350,8 +367,7 @@ I've been lucky to work with some excellent students throughout my career.
     <b>Undergraduate students at UBC:</b></p>
     </p>
     <ul>
-    <li>Kevin Liu (USRA, URA): Argument Generation for Automatically Generated Unit Tests (ExploTest) </li>
-    <li>Randy Zhu (USRA, Honours Thesis): Readability and Maintainability of Automatically Generated Unit Tests (ExploTest)</li>
+    <li>Anmol Ghadia (USRA): LLM-Driven Fuzz Driver Generation </li>
     </ul>
 
 <p>	<b>Past graduate students:</b></p>
@@ -366,6 +382,8 @@ I've been lucky to work with some excellent students throughout my career.
 
 <p>	<b>Past undergraduate students:</b></p>
     <ul> 
+    <li>Kevin Liu (UBC, USRA + URA): Argument Generation for Automatically Generated Unit Tests (ExploTest) </li>
+    <li>Randy Zhu (UBC, USRA + Honours Thesis): Readability and Maintainability of Automatically Generated Unit Tests (ExploTest)</li>
     <li>Zihao Huang (UBC, WLIURA): Explotest</li>
     <li>Gary Wu (UBC, WLIURA): PBT from Unit Tests with LLMs</li>
     <li>Alain Zhiyanov (UBC): working on allowing open-source models to be used with CodaMOSA</li>
