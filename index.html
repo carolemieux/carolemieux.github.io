@@ -108,6 +108,14 @@ Topics in Programming Languages: Automated Testing, Bug Detection, and Program A
 <table class="inner">
 <tr>
 <td style = "width:25%" align="center">
+<img src="docprism_logo.png" alt="A stylized prism outputting yellow, green, and blue light, with the word DocPrism in the foreground." width="250">
+</td>
+<td align="justify">
+Discrepancies between code and documentation could indicate outdated documentation or bugs in the code. LLMs had a tendency to point out natural gaps between code (series of instructions for a machine) and documentation (an abstraction of the behaviour in natural language). Pointing these nitpicks out is rarely useful: documentation is meant to abstract the code to make it understandable without reading the code. We created the Local Categorization, External Filtering methodology to filter out these nitpicks. LCEF greatly improved performance with low/no- reasoning models, increasing accuracy on our Python dataset from 0.14 to 0.94. This methodology is flexible enough we could evaluate on Python, TypeScript, Java and C++ programs. You can find the codebase for DocPrism <a href="https://github.com/SnowPhoebe/DocPrism">here</a>.
+</td></tr>
+
+<tr>
+<td style = "width:25%" align="center">
 <img src="cicd_plot.jpg" alt="Bar chart showing AFL with more bugs reached/triggered than AFL++ or libfuzzer." width="250">
 </td>
 <td align="justify">
